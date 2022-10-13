@@ -15,7 +15,7 @@
 # KIND, either express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-# Description: pcb-main-nautilus-atmega4809 repository CI static analysis script.
+# Description: pcb-main-nautilus-atmega4809 repository CI BOM generation script.
 
 function error()
 {
@@ -38,16 +38,16 @@ function abort()
 function display_help_text()
 {
     echo "NAME"
-    echo "    $mnemonic - Run a static analyzer against pcb-main-nautilus-atmega4809."
+    echo "    $mnemonic - Generate project BOM."
     echo "SYNOPSIS"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --analyzer <analyzer>"
+    echo "    $mnemonic --bom-type <bom-type>"
     echo "OPTIONS"
-    echo "    --analyzer <analyzer>"
-    echo "        Specify the analyzer to run against pcb-main-nautilus-atmega4809. The"
-    echo "        following analyzers are supported:"
-    echo "            shellcheck"
+    echo "    --bom-type <bom-type>"
+    echo "        Specify the type of BOM to generate. The following BOM types are"
+    echo "        supported:"
+    echo "            traditional"
     echo "    --help"
     echo "        Display this help text."
     echo "    --version"
@@ -55,7 +55,7 @@ function display_help_text()
     echo "EXAMPLES"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --analyzer shellcheck"
+    echo "    $mnemonic --bom-type traditional"
 }
 
 function display_version()
@@ -63,18 +63,42 @@ function display_version()
     echo "$mnemonic, version $version"
 }
 
-function run_shellcheck()
+function generate_bom_traditional()
 {
-    local scripts; mapfile -t scripts < <( git -C "$repository" ls-files ':!:official-libraries/' ':!:utilities/' | xargs -r -d '\n' -I '{}' find "$repository/{}" -executable ); readonly scripts
+    local projects; mapfile -t projects < <( git -C "$repository" ls-files '*.kicad_pro' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly projects
 
-    if ! shellcheck "${scripts[@]}"; then
-        abort
+    if [[ "${#projects[@]}" -gt 1 ]]; then
+        abort "multiple projects found: ${projects[*]}"
+    fi
+
+    if [[ "${#projects[@]}" -eq 1 ]]; then
+        local -r project="${projects[0]}"
+        local -r project_name=$( basename -s .kicad_pro "$project" )
+        local -r schematic="$repository/$project_name.kicad_sch"
+
+        if git -C "$repository" ls-files --error-unmatch "$schematic"; then
+            # KiAuto documentation refers to the following file as "the project's XML
+            # BoM", but it will be used as KiBoM's "netlist" positional argument
+            local -r netlist="$repository/$project_name.xml"
+
+            if ! "$repository/utilities/KiAuto/src/eeschema_do" bom_xml "$schematic" "$repository/temp"; then
+                abort
+            fi
+
+            local -r formats=( "csv" "html" "xml" "xslx" )
+
+            for format in "${formats[@]}"; do
+                if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" -d "$repository/bom-traditional" "$netlist" "$project_name.$format"; then
+                    abort
+                fi
+            done
+        fi
     fi
 }
 
-function ensure_no_static_analysis_errors_are_present()
+function generate_bom()
 {
-    "run_$analyzer"
+    "generate_bom_$bom_type"
 }
 
 function main()
@@ -88,19 +112,19 @@ function main()
         local argument="$1"; shift
 
         case "$argument" in
-            --analyzer)
-                if [[ -n "$analyzer" ]]; then
-                    abort "analyzer already specified"
+            --bom-type)
+                if [[ -n "$bom_type" ]]; then
+                    abort "BOM type already specified"
                 fi
 
                 if [[ "$#" -le 0 ]]; then
-                    abort "analyzer not specified"
+                    abort "BOM type not specified"
                 fi
 
-                local -r analyzer="$1"; shift
+                local -r bom_type="$1"; shift
 
-                if [[ "$analyzer" != "shellcheck" ]]; then
-                    abort "'$analyzer' is not a supported analyzer"
+                if [[ "$bom_type" != "traditional" ]]; then
+                    abort "'$bom_type' is not a supported BOM type"
                 fi
                 ;;
             --help)
@@ -122,11 +146,11 @@ function main()
         esac
     done
 
-    if [[ -z "$analyzer" ]]; then
-        abort "'--analyzer' must be specified"
+    if [[ -z "$bom_type" ]]; then
+        abort "'--bom-type' must be specified"
     fi
 
-    ensure_no_static_analysis_errors_are_present
+    generate_bom
 }
 
 main "$@"
