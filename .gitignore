@@ -14,3 +14,9 @@
 # permissions and limitations under the License.
 
 # Description: Git ignore rules for the pcb-main-nautilus-atmega4809 repository.
+
+# ignore KiCad project backups
+*-backups/
+
+# ignore KiCad project local settings
+*.kicad_prl

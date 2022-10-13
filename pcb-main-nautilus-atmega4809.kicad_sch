@@ -1,0 +1,20 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid b6d7b880-0f23-4e9c-90d6-06961a40ea16)
+
+  (paper "A")
+
+  (title_block
+    (title "https://github.com/apcountryman/pcb-main-nautilus-atmega4809")
+    (rev "GIT_VERSION")
+    (comment 1 "Derivative of the \"Arduino UNO Rev3\" (https://docs.arduino.cc/hardware/uno-rev3) and\\n\"Arduino Nano Every\" (https://docs.arduino.cc/hardware/nano-every) reference designs")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
