@@ -73,6 +73,10 @@ function generate_schematic_pdf()
         local -r schematic="$repository/$project_name.kicad_sch"
 
         if git -C "$repository" ls-files --error-unmatch "$schematic"; then
+            if ! sed -i -e "s/GIT_VERSION/$version/g" "$schematic"; then
+                abort
+            fi
+
             if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$repository/schematic-pdf"; then
                 abort
             fi
