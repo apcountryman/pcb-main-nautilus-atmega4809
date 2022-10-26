@@ -59,6 +59,13 @@ function display_version()
     echo "$mnemonic, version $version"
 }
 
+function restore_schematic()
+{
+    if ! git -C "$repository" restore "$schematic"; then
+        abort
+    fi
+}
+
 function generate_schematic_pdf()
 {
     local projects; mapfile -t projects < <( git -C "$repository" ls-files '*.kicad_pro' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly projects
@@ -74,12 +81,16 @@ function generate_schematic_pdf()
 
         if git -C "$repository" ls-files --error-unmatch "$schematic"; then
             if ! sed -i -e "s/GIT_VERSION/$version/g" "$schematic"; then
+                restore_schematic
                 abort
             fi
 
             if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$repository/schematic-pdf"; then
+                restore_schematic
                 abort
             fi
+
+            restore_schematic
         fi
     fi
 }

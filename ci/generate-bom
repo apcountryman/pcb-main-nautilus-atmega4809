@@ -63,6 +63,13 @@ function display_version()
     echo "$mnemonic, version $version"
 }
 
+function restore_schematic()
+{
+    if ! git -C "$repository" restore "$schematic"; then
+        abort
+    fi
+}
+
 function generate_bom_traditional()
 {
     local projects; mapfile -t projects < <( git -C "$repository" ls-files '*.kicad_pro' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly projects
@@ -82,10 +89,12 @@ function generate_bom_traditional()
             local -r netlist="$repository/$project_name.xml"
 
             if ! sed -i -e "s/GIT_VERSION/$version/g" "$schematic"; then
+                restore_schematic
                 abort
             fi
 
             if ! "$repository/utilities/KiAuto/src/eeschema_do" bom_xml "$schematic" "$repository/temp"; then
+                restore_schematic
                 abort
             fi
 
@@ -93,9 +102,12 @@ function generate_bom_traditional()
 
             for format in "${formats[@]}"; do
                 if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" -d "$repository/bom-traditional" "$netlist" "$project_name.$format"; then
+                    restore_schematic
                     abort
                 fi
             done
+
+            restore_schematic
         fi
     fi
 }
