@@ -82,6 +82,7 @@ function generate_bom_traditional()
         local -r project="${projects[0]}"
         local -r project_name=$( basename -s .kicad_pro "$project" )
         local -r schematic="$repository/$project_name.kicad_sch"
+        local -r kibom_configuration_file="$repository/kibom.ini"
 
         if git -C "$repository" ls-files --error-unmatch "$schematic"; then
             # KiAuto documentation refers to the following file as "the project's XML
@@ -101,7 +102,7 @@ function generate_bom_traditional()
             local -r formats=( "csv" "html" "tsv" "txt" "xlsx" "xml" )
 
             for format in "${formats[@]}"; do
-                if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" -d "$repository/bom-traditional" "$netlist" "$project_name.$format"; then
+                if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" --cfg "$kibom_configuration_file" -d "$repository/bom-traditional" "$netlist" "$project_name.$format"; then
                     restore_schematic
                     abort
                 fi
