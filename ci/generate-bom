@@ -98,7 +98,7 @@ function generate_bom_traditional()
                 abort
             fi
 
-            local -r formats=( "csv" "html" "xml" "xslx" )
+            local -r formats=( "csv" "html" "tsv" "txt" "xlsx" "xml" )
 
             for format in "${formats[@]}"; do
                 if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" -d "$repository/bom-traditional" "$netlist" "$project_name.$format"; then
