@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "Device")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-symbols/Device.kicad_sym")(options "")(descr ""))
+  (lib (name "Regulator_Linear")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-symbols/Regulator_Linear.kicad_sym")(options "")(descr ""))
+)

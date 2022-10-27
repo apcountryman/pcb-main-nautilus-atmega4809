@@ -1,0 +1,7 @@
+(fp_lib_table
+  (lib (name "Capacitor_SMD")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Capacitor_SMD.pretty")(options "")(descr ""))
+  (lib (name "Diode_SMD")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Diode_SMD.pretty")(options "")(descr ""))
+  (lib (name "LED_SMD")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/LED_SMD.pretty")(options "")(descr ""))
+  (lib (name "Package_TO_SOT_SMD")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Package_TO_SOT_SMD.pretty")(options "")(descr ""))
+  (lib (name "Resistor_SMD")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Resistor_SMD.pretty")(options "")(descr ""))
+)

@@ -14,7 +14,89 @@
   )
 
 
+  (sheet (at 69.85 66.04) (size 19.05 12.7) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 5a33ba3c-72f7-420a-981d-98ac038c5559)
+    (property "Sheet name" "Power" (id 0) (at 69.85 65.3284 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "pcb-main-nautilus-atmega4809-sheet-power.kicad_sch" (id 1) (at 69.85 79.3246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (pin "5V" output (at 88.9 71.12 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid f0eee0fd-5daf-4857-af7e-e6f4697a0bce)
+    )
+    (pin "USB_VBUS" input (at 69.85 73.66 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 8442a3bf-8598-4b80-b18d-4621fc6fdead)
+    )
+    (pin "PWRIN" input (at 69.85 68.58 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 2bdb0b18-deda-4215-a038-b1863739622f)
+    )
+    (pin "VIN" bidirectional (at 69.85 71.12 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 7b6bb3f6-e1db-482c-8e97-43837276f93e)
+    )
+    (pin "GND" input (at 69.85 76.2 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 73b52999-cf4a-42b2-92f4-7947e559cbf7)
+    )
+    (pin "3.3V" output (at 88.9 73.66 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid ed9b4993-cc79-4e49-9ffc-5b31e6b39b47)
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559" (page "2"))
+  )
+
+  (symbol_instances
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/7408636a-a4a9-4362-ba4c-0a06147634bc"
+      (reference "C1") (unit 1) (value "47uF/25V") (footprint "")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/b6fd6716-59a0-4f9a-985b-c7a8000096b3"
+      (reference "C2") (unit 1) (value "0.1uF/25V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/982d25b7-d28f-455a-b867-22549e96b549"
+      (reference "C3") (unit 1) (value "47uF/6.3V") (footprint "")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/d7420ce3-8bf9-42c3-93e9-9fdeab6607ed"
+      (reference "C4") (unit 1) (value "10uF/6.3V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/a047b6c3-e0b4-4f5c-b490-a9c4fb048b22"
+      (reference "C5") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/5b44939b-18bc-4c09-9250-24b4ff8f8595"
+      (reference "C6") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/77a97430-fc8a-45b8-a5b5-ea674944d8bd"
+      (reference "D1") (unit 1) (value "20V/1A") (footprint "Diode_SMD:D_SOD-123F")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/b95300ed-137f-43f2-ae28-165cdad19d45"
+      (reference "D2") (unit 1) (value "20V/1A") (footprint "Diode_SMD:D_SOD-123F")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/29a8b156-103b-46fc-86a8-ec27533646aa"
+      (reference "D3") (unit 1) (value "GREEN") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/a21083b7-5749-4249-bcc1-55c3f0a221ff"
+      (reference "D4") (unit 1) (value "GREEN") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/3e98dc00-be45-4498-ad45-de614d277a00"
+      (reference "R1") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/cf4e4292-169e-4011-8d76-bdce8a544dc4"
+      (reference "R2") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/678f9d4d-d6a2-4e0c-8b54-d5be33abe55a"
+      (reference "U1") (unit 1) (value "NCP1117-5.0_TO252") (footprint "Package_TO_SOT_SMD:TO-252-2")
+    )
+    (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/f9f27459-88f7-42f2-9098-bfb9e793b468"
+      (reference "U2") (unit 1) (value "AP2112K-3.3") (footprint "Package_TO_SOT_SMD:SOT-23-5")
+    )
   )
 )
