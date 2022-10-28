@@ -324,6 +324,10 @@
     [
       "5a33ba3c-72f7-420a-981d-98ac038c5559",
       "Power"
+    ],
+    [
+      "9563730f-8d1a-4fdb-af84-834004e725da",
+      "UPDI Programmer and USB-Serial Bridge"
     ]
   ],
   "text_variables": {}
