@@ -19,6 +19,9 @@
 *-backups/
 *-bak
 
+# ignore KiCad caches
+fp-info-cache
+
 # ignore KiCad project local settings
 *.kicad_prl
 
