@@ -867,7 +867,7 @@
     (property "Footprint" "" (id 2) (at 158.75 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1181.pdf" (id 3) (at 158.75 74.93 0)
+    (property "Datasheet" "https://api.pim.na.industrial.panasonic.com/file_stream/main/fileversion/9127" (id 3) (at 158.75 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Manufacturer" "Panasonic Electronic Components" (id 4) (at 158.75 74.93 0)
