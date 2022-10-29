@@ -676,7 +676,7 @@
     (property "Value" "NetTie_3" (id 1) (at 167.64 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (id 2) (at 167.64 101.6 0)
+    (property "Footprint" "NetTie:NetTie-3_SMD_Pad0.5mm" (id 2) (at 167.64 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 167.64 101.6 0)

@@ -236,7 +236,7 @@
       (reference "D4") (unit 1) (value "GREEN") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/9563730f-8d1a-4fdb-af84-834004e725da/e8c125a0-c891-462e-9bd4-251e59b83fd3"
-      (reference "NT1") (unit 1) (value "NetTie_3") (footprint "")
+      (reference "NT1") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
     )
     (path "/2696b8cf-0d11-49f9-8de6-4c9d32a16799/faa0bcb3-92cf-49f0-8c93-d9591933f632"
       (reference "Q1") (unit 1) (value "BSS138PW,115") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering")
