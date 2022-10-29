@@ -323,23 +323,23 @@
     ],
     [
       "5a33ba3c-72f7-420a-981d-98ac038c5559",
-      "Power"
+      "POWER"
     ],
     [
       "9563730f-8d1a-4fdb-af84-834004e725da",
-      "UPDI Programmer and USB-Serial Bridge"
+      "UPDI PROGRAMMER AND USB-SERIAL BRIDGE"
     ],
     [
       "2696b8cf-0d11-49f9-8de6-4c9d32a16799",
-      "UPDI Bi-Directional Level Shifter"
+      "UPDI BI-DIRECTIONAL LEVEL SHIFTER"
     ],
     [
       "b9953305-206e-463a-87bb-3c268da92256",
-      "Serial RX Bi-Directional Level Shifter"
+      "SERIAL RX BI-DIRECTIONAL LEVEL SHIFTER"
     ],
     [
       "b67adff0-b650-44cc-9343-28972961f0fd",
-      "Serial TX Bi-Directional Level Shifter"
+      "SERIAL TX BI-DIRECTIONAL LEVEL SHIFTER"
     ]
   ],
   "text_variables": {}
