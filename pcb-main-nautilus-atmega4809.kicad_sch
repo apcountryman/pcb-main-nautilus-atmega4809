@@ -344,26 +344,26 @@
     (path "/9563730f-8d1a-4fdb-af84-834004e725da/0ab0dcb0-de7e-4820-b2c9-59f15c46f76b"
       (reference "C9") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/337ef061-cdaf-446d-853a-a455ed608986"
-      (reference "C?") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
-    )
-    (path "/535baf57-8641-4121-897f-4706b098c129/4e648bff-272c-4b73-a5b4-49cc9360a091"
-      (reference "C?") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
-    )
-    (path "/535baf57-8641-4121-897f-4706b098c129/527fcc02-614f-402d-8a40-8adc691ddf2d"
-      (reference "C?") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
-    )
-    (path "/535baf57-8641-4121-897f-4706b098c129/5ca56fba-2781-493a-8be7-28c2a2f3a02c"
-      (reference "C?") (unit 1) (value "4.7uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    (path "/535baf57-8641-4121-897f-4706b098c129/b769a674-69fc-4d19-b48c-948a5611cf7a"
+      (reference "C10") (unit 1) (value "4.7uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/ae68db57-7951-42a3-a4d3-5cb25363d2dd"
-      (reference "C?") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
-    )
-    (path "/535baf57-8641-4121-897f-4706b098c129/b769a674-69fc-4d19-b48c-948a5611cf7a"
-      (reference "C?") (unit 1) (value "4.7uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+      (reference "C11") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/c8134c9a-1f72-44b8-98a0-341094c202be"
-      (reference "C?") (unit 1) (value "4.7uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+      (reference "C12") (unit 1) (value "4.7uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/527fcc02-614f-402d-8a40-8adc691ddf2d"
+      (reference "C13") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/4e648bff-272c-4b73-a5b4-49cc9360a091"
+      (reference "C14") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/5ca56fba-2781-493a-8be7-28c2a2f3a02c"
+      (reference "C15") (unit 1) (value "4.7uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/337ef061-cdaf-446d-853a-a455ed608986"
+      (reference "C16") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/77a97430-fc8a-45b8-a5b5-ea674944d8bd"
       (reference "D1") (unit 1) (value "20V/1A") (footprint "Diode_SMD:D_SOD-123F")
@@ -381,10 +381,10 @@
       (reference "NT1") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/721a214b-1fbf-4743-8bf1-fce9f7cb3476"
-      (reference "NT?") (unit 1) (value "NetTie_3") (footprint "")
+      (reference "NT2") (unit 1) (value "NetTie_3") (footprint "")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/a782ba02-2f36-47c9-9048-63d40ac57a9e"
-      (reference "NT?") (unit 1) (value "NetTie_3") (footprint "")
+      (reference "NT3") (unit 1) (value "NetTie_3") (footprint "")
     )
     (path "/2696b8cf-0d11-49f9-8de6-4c9d32a16799/faa0bcb3-92cf-49f0-8c93-d9591933f632"
       (reference "Q1") (unit 1) (value "BSS138PW,115") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering")
@@ -435,7 +435,7 @@
       (reference "U3") (unit 1) (value "ATSAMD11D14A-SS") (footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/1fba5f01-b8b9-45f9-b606-345e3d315f55"
-      (reference "U?") (unit 1) (value "ATmega4809-A") (footprint "Package_QFP:TQFP-48_7x7mm_P0.5mm")
+      (reference "U4") (unit 1) (value "ATmega4809-A") (footprint "Package_QFP:TQFP-48_7x7mm_P0.5mm")
     )
   )
 )
