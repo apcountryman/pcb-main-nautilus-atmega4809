@@ -381,10 +381,10 @@
       (reference "NT1") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/721a214b-1fbf-4743-8bf1-fce9f7cb3476"
-      (reference "NT2") (unit 1) (value "NetTie_3") (footprint "")
+      (reference "NT2") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/a782ba02-2f36-47c9-9048-63d40ac57a9e"
-      (reference "NT3") (unit 1) (value "NetTie_3") (footprint "")
+      (reference "NT3") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
     )
     (path "/2696b8cf-0d11-49f9-8de6-4c9d32a16799/faa0bcb3-92cf-49f0-8c93-d9591933f632"
       (reference "Q1") (unit 1) (value "BSS138PW,115") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering")
