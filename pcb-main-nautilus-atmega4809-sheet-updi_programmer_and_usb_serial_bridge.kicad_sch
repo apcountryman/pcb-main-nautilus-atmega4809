@@ -575,7 +575,7 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42363-SAM-D11_Datasheet.pdf" (id 3) (at 139.7 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Manufacturer" "Microchip" (id 4) (at 139.7 101.6 0)
+    (property "Manufacturer" "Microchip Technology" (id 4) (at 139.7 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Manufacturer Part Number" "ATSAMD11D14A-SS" (id 5) (at 139.7 101.6 0)
