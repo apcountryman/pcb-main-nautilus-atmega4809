@@ -359,11 +359,14 @@
     (path "/535baf57-8641-4121-897f-4706b098c129/4e648bff-272c-4b73-a5b4-49cc9360a091"
       (reference "C14") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
+    (path "/535baf57-8641-4121-897f-4706b098c129/9690dd11-568f-42ec-acaa-51804cc51b1b"
+      (reference "C15") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
     (path "/535baf57-8641-4121-897f-4706b098c129/5ca56fba-2781-493a-8be7-28c2a2f3a02c"
-      (reference "C15") (unit 1) (value "4.7uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+      (reference "C16") (unit 1) (value "4.7uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/337ef061-cdaf-446d-853a-a455ed608986"
-      (reference "C16") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+      (reference "C17") (unit 1) (value "0.1uF/10V") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/77a97430-fc8a-45b8-a5b5-ea674944d8bd"
       (reference "D1") (unit 1) (value "20V/1A") (footprint "Diode_SMD:D_SOD-123F")
@@ -377,11 +380,11 @@
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/a21083b7-5749-4249-bcc1-55c3f0a221ff"
       (reference "D4") (unit 1) (value "GREEN") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/98ffd9eb-6a42-40ba-917a-cfeb9ee5591d"
-      (reference "D5") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
-    )
     (path "/535baf57-8641-4121-897f-4706b098c129/ad030bfa-9ff6-4a09-96d0-99902cfc5324"
-      (reference "D6") (unit 1) (value "RED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "D5") (unit 1) (value "RED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/98ffd9eb-6a42-40ba-917a-cfeb9ee5591d"
+      (reference "D6") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/bc5c465a-4408-47a8-b403-b778f9832a23"
       (reference "D7") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
@@ -434,14 +437,23 @@
     (path "/b67adff0-b650-44cc-9343-28972961f0fd/08011bfc-ec9f-46b5-8bcb-363c7a858e08"
       (reference "R10") (unit 1) (value "4.7k/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/9c3a808c-58c6-4d33-9871-be9c5e46994f"
-      (reference "R11") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    (path "/535baf57-8641-4121-897f-4706b098c129/f7190da5-3038-4151-a3a2-3bca978f667a"
+      (reference "R11") (unit 1) (value "4.7k/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/1c645e79-eee2-445a-97c6-a2127b2429d2"
+    (path "/535baf57-8641-4121-897f-4706b098c129/53e22935-1d2e-4086-aaa0-2622d9016940"
       (reference "R12") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/b7c1a3dd-bee9-453f-a568-216b24a2bcec"
+    (path "/535baf57-8641-4121-897f-4706b098c129/1c645e79-eee2-445a-97c6-a2127b2429d2"
       (reference "R13") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/9c3a808c-58c6-4d33-9871-be9c5e46994f"
+      (reference "R14") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/b7c1a3dd-bee9-453f-a568-216b24a2bcec"
+      (reference "R15") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/e7acc9d5-3de1-4b8c-a338-1ab041fb81e5"
+      (reference "SW1") (unit 1) (value "PTS645SH43SMTR92 LFS") (footprint "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm")
     )
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/678f9d4d-d6a2-4e0c-8b54-d5be33abe55a"
       (reference "U1") (unit 1) (value "NCP1117-5.0_TO252") (footprint "Package_TO_SOT_SMD:TO-252-2")
