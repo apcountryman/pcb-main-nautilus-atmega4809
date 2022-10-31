@@ -413,10 +413,10 @@
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/cf4e4292-169e-4011-8d76-bdce8a544dc4"
       (reference "R2") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/9563730f-8d1a-4fdb-af84-834004e725da/90972ee7-7e53-4f95-af2f-bd6dbb00fdf9"
+    (path "/9563730f-8d1a-4fdb-af84-834004e725da/f1e4345f-c080-4ad6-9675-48866056f5d2"
       (reference "R3") (unit 1) (value "4.7k/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/9563730f-8d1a-4fdb-af84-834004e725da/f1e4345f-c080-4ad6-9675-48866056f5d2"
+    (path "/9563730f-8d1a-4fdb-af84-834004e725da/90972ee7-7e53-4f95-af2f-bd6dbb00fdf9"
       (reference "R4") (unit 1) (value "4.7k/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/2696b8cf-0d11-49f9-8de6-4c9d32a16799/ac494291-0341-40e4-84fe-a220d54d9e87"
@@ -440,13 +440,13 @@
     (path "/535baf57-8641-4121-897f-4706b098c129/f7190da5-3038-4151-a3a2-3bca978f667a"
       (reference "R11") (unit 1) (value "4.7k/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/53e22935-1d2e-4086-aaa0-2622d9016940"
+    (path "/535baf57-8641-4121-897f-4706b098c129/9c3a808c-58c6-4d33-9871-be9c5e46994f"
       (reference "R12") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/9c3a808c-58c6-4d33-9871-be9c5e46994f"
+    (path "/535baf57-8641-4121-897f-4706b098c129/b7c1a3dd-bee9-453f-a568-216b24a2bcec"
       (reference "R13") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/b7c1a3dd-bee9-453f-a568-216b24a2bcec"
+    (path "/535baf57-8641-4121-897f-4706b098c129/53e22935-1d2e-4086-aaa0-2622d9016940"
       (reference "R14") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/1c645e79-eee2-445a-97c6-a2127b2429d2"
