@@ -76,14 +76,6 @@
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid 56cfc301-235d-4ddc-9aac-d6d7a6d76ea8)
     )
-    (pin "HOST_TX" bidirectional (at 147.32 109.22 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid adba7e72-7f31-40ef-83aa-898dc4b4a0a9)
-    )
-    (pin "HOST_RX" bidirectional (at 147.32 111.76 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid fed9f7b5-31d1-490f-8bc6-a77314a5a59e)
-    )
     (pin "D8" bidirectional (at 224.79 72.39 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid 838d11b8-8e18-4402-bf3f-706128b75117)
@@ -159,6 +151,14 @@
     (pin "D19{slash}A5{slash}SCL" bidirectional (at 224.79 105.41 0)
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid 6c967eae-60f5-419f-ba91-f40091e0eee5)
+    )
+    (pin "HOST_RX" input (at 147.32 95.25 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid c2c05122-7529-4137-aa45-5c999955822b)
+    )
+    (pin "HOST_TX" output (at 147.32 97.79 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 64382619-02c2-424d-8659-be4fe571741f)
     )
   )
 
@@ -380,14 +380,14 @@
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/a21083b7-5749-4249-bcc1-55c3f0a221ff"
       (reference "D4") (unit 1) (value "GREEN") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/ad030bfa-9ff6-4a09-96d0-99902cfc5324"
-      (reference "D5") (unit 1) (value "RED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
-    )
     (path "/535baf57-8641-4121-897f-4706b098c129/98ffd9eb-6a42-40ba-917a-cfeb9ee5591d"
-      (reference "D6") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "D5") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/bc5c465a-4408-47a8-b403-b778f9832a23"
-      (reference "D7") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "D6") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/ad030bfa-9ff6-4a09-96d0-99902cfc5324"
+      (reference "D7") (unit 1) (value "RED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/9563730f-8d1a-4fdb-af84-834004e725da/e8c125a0-c891-462e-9bd4-251e59b83fd3"
       (reference "NT1") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
@@ -443,13 +443,13 @@
     (path "/535baf57-8641-4121-897f-4706b098c129/53e22935-1d2e-4086-aaa0-2622d9016940"
       (reference "R12") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/1c645e79-eee2-445a-97c6-a2127b2429d2"
+    (path "/535baf57-8641-4121-897f-4706b098c129/9c3a808c-58c6-4d33-9871-be9c5e46994f"
       (reference "R13") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/9c3a808c-58c6-4d33-9871-be9c5e46994f"
+    (path "/535baf57-8641-4121-897f-4706b098c129/b7c1a3dd-bee9-453f-a568-216b24a2bcec"
       (reference "R14") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/b7c1a3dd-bee9-453f-a568-216b24a2bcec"
+    (path "/535baf57-8641-4121-897f-4706b098c129/1c645e79-eee2-445a-97c6-a2127b2429d2"
       (reference "R15") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/535baf57-8641-4121-897f-4706b098c129/e7acc9d5-3de1-4b8c-a338-1ab041fb81e5"
