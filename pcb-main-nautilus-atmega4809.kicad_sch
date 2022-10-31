@@ -377,8 +377,14 @@
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/a21083b7-5749-4249-bcc1-55c3f0a221ff"
       (reference "D4") (unit 1) (value "GREEN") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
+    (path "/535baf57-8641-4121-897f-4706b098c129/98ffd9eb-6a42-40ba-917a-cfeb9ee5591d"
+      (reference "D5") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+    )
     (path "/535baf57-8641-4121-897f-4706b098c129/ad030bfa-9ff6-4a09-96d0-99902cfc5324"
-      (reference "D5") (unit 1) (value "RED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "D6") (unit 1) (value "RED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/bc5c465a-4408-47a8-b403-b778f9832a23"
+      (reference "D7") (unit 1) (value "YELLOW") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/9563730f-8d1a-4fdb-af84-834004e725da/e8c125a0-c891-462e-9bd4-251e59b83fd3"
       (reference "NT1") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
@@ -428,8 +434,14 @@
     (path "/b67adff0-b650-44cc-9343-28972961f0fd/08011bfc-ec9f-46b5-8bcb-363c7a858e08"
       (reference "R10") (unit 1) (value "4.7k/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/1c645e79-eee2-445a-97c6-a2127b2429d2"
+    (path "/535baf57-8641-4121-897f-4706b098c129/9c3a808c-58c6-4d33-9871-be9c5e46994f"
       (reference "R11") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/1c645e79-eee2-445a-97c6-a2127b2429d2"
+      (reference "R12") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/b7c1a3dd-bee9-453f-a568-216b24a2bcec"
+      (reference "R13") (unit 1) (value "330/0.1W") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/678f9d4d-d6a2-4e0c-8b54-d5be33abe55a"
       (reference "U1") (unit 1) (value "NCP1117-5.0_TO252") (footprint "Package_TO_SOT_SMD:TO-252-2")
