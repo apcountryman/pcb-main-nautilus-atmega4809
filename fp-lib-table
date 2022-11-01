@@ -1,6 +1,10 @@
 (fp_lib_table
   (lib (name "Button_Switch_SMD")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Button_Switch_SMD.pretty")(options "")(descr ""))
   (lib (name "Capacitor_SMD")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Capacitor_SMD.pretty")(options "")(descr ""))
+  (lib (name "Connector_BarrelJack")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Connector_BarrelJack.pretty")(options "")(descr ""))
+  (lib (name "Connector_PinHeader_2.54mm")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Connector_PinHeader_2.54mm.pretty")(options "")(descr ""))
+  (lib (name "Connector_PinSocket_1.27mm")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Connector_PinSocket_1.27mm.pretty")(options "")(descr ""))
+  (lib (name "Connector_USB")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Connector_USB.pretty")(options "")(descr ""))
   (lib (name "Diode_SMD")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/Diode_SMD.pretty")(options "")(descr ""))
   (lib (name "LED_SMD")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/LED_SMD.pretty")(options "")(descr ""))
   (lib (name "NetTie")(type "KiCad")(uri "${KIPRJMOD}/official-libraries/kicad-footprints/NetTie.pretty")(options "")(descr ""))
