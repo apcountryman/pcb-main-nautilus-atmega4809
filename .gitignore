@@ -26,7 +26,7 @@ fp-info-cache
 *.kicad_prl
 
 # ignore generated files
+*-bom-*/
+*-schematic-pdf/
 *.erc
-bom-*/
-pcb-main-nautilus-atmega4809.xml
-schematic-pdf/
+*.xml

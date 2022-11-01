@@ -85,7 +85,7 @@ function generate_schematic_pdf()
                 abort
             fi
 
-            if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$repository/schematic-pdf"; then
+            if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$repository/$project_name-schematic-pdf"; then
                 restore_schematic
                 abort
             fi

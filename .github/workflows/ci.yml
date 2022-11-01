@@ -87,8 +87,8 @@ jobs:
             - name: Archive generated schematic PDF
               uses: actions/upload-artifact@v2
               with:
-                  name: schematic-pdf
-                  path: schematic-pdf
+                  name: pcb-main-nautilus-atmega4809-schematic-pdf
+                  path: pcb-main-nautilus-atmega4809-schematic-pdf
                   retention-days: 7
 
     generate-bom-traditional:
@@ -107,6 +107,6 @@ jobs:
             - name: Archive generated BOM
               uses: actions/upload-artifact@v2
               with:
-                  name: bom-traditional
-                  path: bom-traditional
+                  name: pcb-main-nautilus-atmega4809-bom-traditional
+                  path: pcb-main-nautilus-atmega4809-bom-traditional
                   retention-days: 7
