@@ -1031,7 +1031,7 @@
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (id 2) (at 182.88 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://connect.kemet.com:7667/gateway/IntelliData-ComponentDocumentation/1.0/download/datasheet/C0603C106M9PACTU" (id 3) (at 182.88 101.6 0)
+    (property "Datasheet" "https://connect.kemet.com:7667/gateway/IntelliData-ComponentDocumentation/1.0/download/datasheet/C0603C106M8PAC7867" (id 3) (at 182.88 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Manufacturer" "KEMET" (id 4) (at 182.88 101.6 0)
