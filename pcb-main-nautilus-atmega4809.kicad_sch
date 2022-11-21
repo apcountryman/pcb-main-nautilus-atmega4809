@@ -2284,15 +2284,6 @@
     (path "/87af8cfd-fe1b-4ff4-bd02-ccb4e2f53955"
       (reference "J8") (unit 1) (value "66951-008LF") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical")
     )
-    (path "/9563730f-8d1a-4fdb-af84-834004e725da/e8c125a0-c891-462e-9bd4-251e59b83fd3"
-      (reference "NT1") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
-    )
-    (path "/535baf57-8641-4121-897f-4706b098c129/721a214b-1fbf-4743-8bf1-fce9f7cb3476"
-      (reference "NT2") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
-    )
-    (path "/535baf57-8641-4121-897f-4706b098c129/a782ba02-2f36-47c9-9048-63d40ac57a9e"
-      (reference "NT3") (unit 1) (value "NetTie_3") (footprint "NetTie:NetTie-3_SMD_Pad0.5mm")
-    )
     (path "/9563730f-8d1a-4fdb-af84-834004e725da/1bc06f9c-8e97-48fc-821f-17675566bdcb/faa0bcb3-92cf-49f0-8c93-d9591933f632"
       (reference "Q1") (unit 1) (value "BSS138PW") (footprint "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering")
     )
