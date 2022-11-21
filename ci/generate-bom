@@ -63,11 +63,15 @@ function display_version()
     echo "$mnemonic, version $version"
 }
 
-function restore_schematic()
+function populate_version()
 {
-    if ! git -C "$repository" restore "$schematic"; then
-        abort
-    fi
+    local files; mapfile -t files < <( git -C "$repository" grep --files-with-matches 'GIT_VERSION' -- ':!:ci/' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly files
+
+    for file in "${files[@]}"; do
+        if ! sed -i -e "s/GIT_VERSION/$version/g" "$file"; then
+            abort
+        fi
+    done
 }
 
 function generate_bom_traditional()
@@ -89,13 +93,7 @@ function generate_bom_traditional()
             # BoM", but it will be used as KiBoM's "netlist" positional argument
             local -r netlist="$repository/$project_name.xml"
 
-            if ! sed -i -e "s/GIT_VERSION/$version/g" "$schematic"; then
-                restore_schematic
-                abort
-            fi
-
             if ! "$repository/utilities/KiAuto/src/eeschema_do" bom_xml "$schematic" "$repository/temp"; then
-                restore_schematic
                 abort
             fi
 
@@ -107,12 +105,9 @@ function generate_bom_traditional()
 
             for format in "${formats[@]}"; do
                 if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" --cfg "$kibom_configuration_file" -d "$repository/$project_name-bom-traditional" "$netlist" "$project_name-bom-traditional.$format"; then
-                    restore_schematic
                     abort
                 fi
             done
-
-            restore_schematic
         fi
     fi
 }
@@ -171,6 +166,7 @@ function main()
         abort "'--bom-type' must be specified"
     fi
 
+    populate_version
     generate_bom
 }
 
