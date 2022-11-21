@@ -83,7 +83,7 @@ jobs:
               run: sudo add-apt-repository --yes ppa:kicad/kicad-6.0-releases && sudo apt update && sudo apt install kicad python3-psutil python3-xvfbwrapper xdotool
             - name: Generate schematic PDF
               shell: bash
-              run: git rev-parse HEAD; git describe --match=none --always --dirty --broken; ./ci/generate-schematic-pdf
+              run: ./ci/generate-schematic-pdf
             - name: Archive generated schematic PDF
               uses: actions/upload-artifact@v2
               with:
@@ -103,7 +103,7 @@ jobs:
               run: sudo add-apt-repository --yes ppa:kicad/kicad-6.0-releases && sudo apt update && sudo apt install kicad python3-psutil python3-xlsxwriter python3-xvfbwrapper xdotool
             - name: Generate BOM
               shell: bash
-              run: git rev-parse HEAD; git describe --match=none --always --dirty --broken; ./ci/generate-bom --bom-type traditional
+              run: ./ci/generate-bom --bom-type traditional
             - name: Archive generated BOM
               uses: actions/upload-artifact@v2
               with:
