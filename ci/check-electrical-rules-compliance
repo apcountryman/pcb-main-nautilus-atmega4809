@@ -15,7 +15,8 @@
 # KIND, either express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-# Description: pcb-main-nautilus-atmega4809 repository CI static analysis script.
+# Description: pcb-main-nautilus-atmega4809 repository CI electrical rules compliance
+#       check script.
 
 function error()
 {
@@ -38,16 +39,13 @@ function abort()
 function display_help_text()
 {
     echo "NAME"
-    echo "    $mnemonic - Run a static analyzer against pcb-main-nautilus-atmega4809."
+    echo "    $mnemonic - Check if the project's schematic complies with the project's"
+    echo "        electrical rules."
     echo "SYNOPSIS"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --analyzer <analyzer>"
+    echo "    $mnemonic"
     echo "OPTIONS"
-    echo "    --analyzer <analyzer>"
-    echo "        Specify the analyzer to run against pcb-main-nautilus-atmega4809. The"
-    echo "        following analyzers are supported:"
-    echo "            shellcheck"
     echo "    --help"
     echo "        Display this help text."
     echo "    --version"
@@ -55,7 +53,7 @@ function display_help_text()
     echo "EXAMPLES"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --analyzer shellcheck"
+    echo "    $mnemonic"
 }
 
 function display_version()
@@ -63,18 +61,16 @@ function display_version()
     echo "$mnemonic, version $version"
 }
 
-function run_shellcheck()
+function check_electrical_rules_compliance()
 {
-    local scripts; mapfile -t scripts < <( git -C "$repository" ls-files ':!:official-libraries/' ':!:utilities/' | xargs -r -d '\n' -I '{}' find "$repository/{}" -executable ); readonly scripts
+    local schematics; mapfile -t schematics < <( git -C "$repository" ls-files '*.kicad_sch' ':!:*-sheet-*.kicad_sch' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly schematics
 
-    if ! shellcheck "${scripts[@]}"; then
-        abort
-    fi
-}
-
-function ensure_no_static_analysis_errors_are_present()
-{
-    "run_$analyzer"
+    for schematic in "${schematics[@]}"; do
+        if ! "$repository/utilities/KiAuto/src/eeschema_do" run_erc "$schematic" "$repository"; then
+            cat "$repository/"*.erc
+            abort
+        fi
+    done
 }
 
 function main()
@@ -88,21 +84,6 @@ function main()
         local argument="$1"; shift
 
         case "$argument" in
-            --analyzer)
-                if [[ -n "$analyzer" ]]; then
-                    abort "analyzer already specified"
-                fi
-
-                if [[ "$#" -le 0 ]]; then
-                    abort "analyzer not specified"
-                fi
-
-                local -r analyzer="$1"; shift
-
-                if [[ "$analyzer" != "shellcheck" ]]; then
-                    abort "'$analyzer' is not a supported analyzer"
-                fi
-                ;;
             --help)
                 display_help_text
                 exit
@@ -122,11 +103,7 @@ function main()
         esac
     done
 
-    if [[ -z "$analyzer" ]]; then
-        abort "'--analyzer' must be specified"
-    fi
-
-    ensure_no_static_analysis_errors_are_present
+    check_electrical_rules_compliance
 }
 
 main "$@"

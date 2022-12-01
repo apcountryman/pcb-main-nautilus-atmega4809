@@ -15,7 +15,7 @@
 # KIND, either express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-# Description: pcb-main-nautilus-atmega4809 repository CI static analysis script.
+# Description: pcb-main-nautilus-atmega4809 repository CI KLC compliance check script.
 
 function error()
 {
@@ -38,24 +38,26 @@ function abort()
 function display_help_text()
 {
     echo "NAME"
-    echo "    $mnemonic - Run a static analyzer against pcb-main-nautilus-atmega4809."
+    echo "    $mnemonic - Check if project specific libraries comply with the KLC."
     echo "SYNOPSIS"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --analyzer <analyzer>"
+    echo "    $mnemonic --library-type <library-type>"
     echo "OPTIONS"
-    echo "    --analyzer <analyzer>"
-    echo "        Specify the analyzer to run against pcb-main-nautilus-atmega4809. The"
-    echo "        following analyzers are supported:"
-    echo "            shellcheck"
     echo "    --help"
     echo "        Display this help text."
+    echo "    --library-type <library-type>"
+    echo "        Specify the type of library to check. The following library types are"
+    echo "        supported:"
+    echo "            footprint"
+    echo "            symbol"
     echo "    --version"
     echo "        Display the version of this script."
     echo "EXAMPLES"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --analyzer shellcheck"
+    echo "    $mnemonic --library-type footprint"
+    echo "    $mnemonic --library-type symbol"
 }
 
 function display_version()
@@ -63,18 +65,31 @@ function display_version()
     echo "$mnemonic, version $version"
 }
 
-function run_shellcheck()
+function check_footprint()
 {
-    local scripts; mapfile -t scripts < <( git -C "$repository" ls-files ':!:official-libraries/' ':!:utilities/' | xargs -r -d '\n' -I '{}' find "$repository/{}" -executable ); readonly scripts
+    local footprints; mapfile -t footprints < <( git -C "$repository" ls-files '*.kicad_mod' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly footprints
 
-    if ! shellcheck "${scripts[@]}"; then
-        abort
+    if [[ "${#footprints[@]}" -ne 0 ]]; then
+        if ! "$repository/utilities/kicad-library-utils/klc-check/check_footprint.py" -s -vv "${footprints[@]}"; then
+            abort
+        fi
     fi
 }
 
-function ensure_no_static_analysis_errors_are_present()
+function check_symbol()
 {
-    "run_$analyzer"
+    local symbols; mapfile -t symbols < <( git -C "$repository" ls-files '*.kicad_sym' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly symbols
+
+    if [[ "${#symbols[@]}" -ne 0 ]]; then
+        if ! "$repository/utilities/kicad-library-utils/klc-check/check_symbol.py" -s -vv "${symbols[@]}"; then
+            abort
+        fi
+    fi
+}
+
+function check_klc_compliance()
+{
+    "check_$library_type"
 }
 
 function main()
@@ -88,24 +103,24 @@ function main()
         local argument="$1"; shift
 
         case "$argument" in
-            --analyzer)
-                if [[ -n "$analyzer" ]]; then
-                    abort "analyzer already specified"
-                fi
-
-                if [[ "$#" -le 0 ]]; then
-                    abort "analyzer not specified"
-                fi
-
-                local -r analyzer="$1"; shift
-
-                if [[ "$analyzer" != "shellcheck" ]]; then
-                    abort "'$analyzer' is not a supported analyzer"
-                fi
-                ;;
             --help)
                 display_help_text
                 exit
+                ;;
+            --library-type)
+                if [[ -n "$library_type" ]]; then
+                    abort "library type already specified"
+                fi
+
+                if [[ "$#" -le 0 ]]; then
+                    abort "library type not specified"
+                fi
+
+                local -r library_type="$1"; shift
+
+                if [[ "$library_type" != "footprint" && "$library_type" != "symbol" ]]; then
+                    abort "'$library_type' is not a supported library type"
+                fi
                 ;;
             --version)
                 display_version
@@ -122,11 +137,11 @@ function main()
         esac
     done
 
-    if [[ -z "$analyzer" ]]; then
-        abort "'--analyzer' must be specified"
+    if [[ -z "$library_type" ]]; then
+        abort "'--library-type' must be specified"
     fi
 
-    ensure_no_static_analysis_errors_are_present
+    check_klc_compliance
 }
 
 main "$@"

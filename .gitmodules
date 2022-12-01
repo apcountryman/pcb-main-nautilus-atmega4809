@@ -14,3 +14,22 @@
 # permissions and limitations under the License.
 
 # Description: Git submodules of the pcb-main-nautilus-atmega4809 repository.
+
+# official libraries
+[submodule "official-libraries/kicad-footprints"]
+	path = official-libraries/kicad-footprints
+	url = ../kicad-footprints
+[submodule "official-libraries/kicad-symbols"]
+	path = official-libraries/kicad-symbols
+	url = ../kicad-symbols
+
+# utilities
+[submodule "utilities/KiAuto"]
+	path = utilities/KiAuto
+	url = ../KiAuto
+[submodule "utilities/KiBoM"]
+	path = utilities/KiBoM
+	url = ../KiBoM
+[submodule "utilities/kicad-library-utils"]
+	path = utilities/kicad-library-utils
+	url = ../kicad-library-utils

@@ -15,7 +15,7 @@
 # KIND, either express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-# Description: pcb-main-nautilus-atmega4809 repository CI static analysis script.
+# Description: pcb-main-nautilus-atmega4809 repository CI schematic PDF generation script.
 
 function error()
 {
@@ -38,16 +38,12 @@ function abort()
 function display_help_text()
 {
     echo "NAME"
-    echo "    $mnemonic - Run a static analyzer against pcb-main-nautilus-atmega4809."
+    echo "    $mnemonic - Generate a PDF of the project's schematic."
     echo "SYNOPSIS"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --analyzer <analyzer>"
+    echo "    $mnemonic"
     echo "OPTIONS"
-    echo "    --analyzer <analyzer>"
-    echo "        Specify the analyzer to run against pcb-main-nautilus-atmega4809. The"
-    echo "        following analyzers are supported:"
-    echo "            shellcheck"
     echo "    --help"
     echo "        Display this help text."
     echo "    --version"
@@ -55,7 +51,7 @@ function display_help_text()
     echo "EXAMPLES"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --analyzer shellcheck"
+    echo "    $mnemonic"
 }
 
 function display_version()
@@ -63,18 +59,36 @@ function display_version()
     echo "$mnemonic, version $version"
 }
 
-function run_shellcheck()
+function populate_version()
 {
-    local scripts; mapfile -t scripts < <( git -C "$repository" ls-files ':!:official-libraries/' ':!:utilities/' | xargs -r -d '\n' -I '{}' find "$repository/{}" -executable ); readonly scripts
+    local files; mapfile -t files < <( git -C "$repository" grep --files-with-matches 'GIT_VERSION' -- ':!:ci/' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly files
 
-    if ! shellcheck "${scripts[@]}"; then
-        abort
-    fi
+    for file in "${files[@]}"; do
+        if ! sed -i -e "s/GIT_VERSION/$version/g" "$file"; then
+            abort
+        fi
+    done
 }
 
-function ensure_no_static_analysis_errors_are_present()
+function generate_schematic_pdf()
 {
-    "run_$analyzer"
+    local projects; mapfile -t projects < <( git -C "$repository" ls-files '*.kicad_pro' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly projects
+
+    if [[ "${#projects[@]}" -gt 1 ]]; then
+        abort "multiple projects found: ${projects[*]}"
+    fi
+
+    if [[ "${#projects[@]}" -eq 1 ]]; then
+        local -r project="${projects[0]}"
+        local -r project_name=$( basename -s .kicad_pro "$project" )
+        local -r schematic="$repository/$project_name.kicad_sch"
+
+        if git -C "$repository" ls-files --error-unmatch "$schematic"; then
+            if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$repository/$project_name-schematic-pdf"; then
+                abort
+            fi
+        fi
+    fi
 }
 
 function main()
@@ -88,21 +102,6 @@ function main()
         local argument="$1"; shift
 
         case "$argument" in
-            --analyzer)
-                if [[ -n "$analyzer" ]]; then
-                    abort "analyzer already specified"
-                fi
-
-                if [[ "$#" -le 0 ]]; then
-                    abort "analyzer not specified"
-                fi
-
-                local -r analyzer="$1"; shift
-
-                if [[ "$analyzer" != "shellcheck" ]]; then
-                    abort "'$analyzer' is not a supported analyzer"
-                fi
-                ;;
             --help)
                 display_help_text
                 exit
@@ -122,11 +121,8 @@ function main()
         esac
     done
 
-    if [[ -z "$analyzer" ]]; then
-        abort "'--analyzer' must be specified"
-    fi
-
-    ensure_no_static_analysis_errors_are_present
+    populate_version
+    generate_schematic_pdf
 }
 
 main "$@"
