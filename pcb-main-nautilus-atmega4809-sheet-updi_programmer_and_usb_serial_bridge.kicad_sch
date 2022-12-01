@@ -7,7 +7,7 @@
   (title_block
     (title "https://github.com/apcountryman/pcb-main-nautilus-atmega4809")
     (rev "GIT_VERSION")
-    (comment 1 "Derivative of the \"Arduino UNO Rev3\" (https://docs.arduino.cc/hardware/uno-rev3) and\\n\"Arduino Nano Every\" (https://docs.arduino.cc/hardware/nano-every) reference designs")
+    (comment 1 "Derivative of the \"Arduino UNO Rev3\" (https://docs.arduino.cc/hardware/uno-rev3) and\\n\"Arduino Nano Every\" (https://docs.arduino.cc/hardware/nano-every) reference designs.")
   )
 
   (lib_symbols
@@ -585,7 +585,7 @@
     (property "Manufacturer" "Microchip Technology" (id 4) (at 139.7 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Manufacturer Part Number" "ATSAMD11D14A-SS" (id 5) (at 139.7 101.6 0)
+    (property "Manufacturer Part Number" "ATSAMD11D14A-SSU" (id 5) (at 139.7 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Digi-Key Part Number" "ATSAMD11D14A-SSUTCT-ND" (id 6) (at 139.7 101.6 0)

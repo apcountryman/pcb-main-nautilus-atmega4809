@@ -7,7 +7,7 @@
   (title_block
     (title "https://github.com/apcountryman/pcb-main-nautilus-atmega4809")
     (rev "GIT_VERSION")
-    (comment 1 "Derivative of the \"Arduino UNO Rev3\" (https://docs.arduino.cc/hardware/uno-rev3) and\\n\"Arduino Nano Every\" (https://docs.arduino.cc/hardware/nano-every) reference designs")
+    (comment 1 "Derivative of the \"Arduino UNO Rev3\" (https://docs.arduino.cc/hardware/uno-rev3) and\\n\"Arduino Nano Every\" (https://docs.arduino.cc/hardware/nano-every) reference designs.")
   )
 
   (lib_symbols
