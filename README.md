@@ -14,6 +14,10 @@ SSH:
 git clone --recurse-submodules git@github.com:apcountryman/pcb-main-nautilus-atmega4809.git
 ```
 
+## Board Setup
+The board setup uses OSH Park's 4 layer board stackup and design rules which can be found
+at https://docs.oshpark.com/services/ and https://docs.oshpark.com/services/four-layer/.
+
 ## Usage
 This repository's Git `pre-commit` hook script is the simplest way to test this project
 during development.
