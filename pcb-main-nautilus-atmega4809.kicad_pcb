@@ -184,7 +184,7 @@
 
   (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEF1) (tstamp 04ce99b1-e0f1-41e5-8da5-5e6eab865030)
-    (at 83.765 124.56)
+    (at 37.445 57.25)
     (descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "LED handsolder")
     (property "Digi-Key Part Number" "160-1436-1-ND")
@@ -232,7 +232,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 05df1824-0a5f-4c20-9cf9-f00940537136)
-    (at 98.18 102.09)
+    (at 51.86 34.78)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -259,7 +259,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 06a43d1b-aaba-44d5-9976-dae017ae341e)
-    (at 90.98 117.38)
+    (at 44.66 50.07)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -286,7 +286,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 08d557c2-cb6d-4829-b8fe-aaa02a990e6b)
-    (at 114.53 95.48)
+    (at 68.21 28.17)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -313,7 +313,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 0c894e0c-dd79-40c9-acc5-48e0cea3b5f1)
-    (at 79.33 129.62)
+    (at 33.01 62.31)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C475M8PAC7867CT-ND")
@@ -359,7 +359,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 1081bf7e-212e-4f7a-babc-4f41a878fc3f)
-    (at 105.38 89.38)
+    (at 59.06 22.07)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -386,7 +386,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 108538e1-a42c-422a-88d5-b730d33e2945)
-    (at 90.98 114.33)
+    (at 44.66 47.02)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -413,7 +413,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 1213b5a5-a51d-4462-9393-b80f02abbfca)
-    (at 139.05 103.02)
+    (at 92.73 35.71)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-14945-1-ND")
@@ -459,7 +459,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 1489de81-9ece-48e2-a969-f7ea0704bf43)
-    (at 111.4 124.52)
+    (at 65.08 57.21)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M8RAC7867CT-ND")
@@ -505,7 +505,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 14d3b4de-706e-4014-a650-22e204be7f2e)
-    (at 105.88 105.18)
+    (at 59.56 37.87)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -532,7 +532,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 1700c72c-e391-45d6-823f-6fada83cb08b)
-    (at 88.11 124.52)
+    (at 41.79 57.21)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P330HCT-ND")
@@ -578,7 +578,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 1e2841a6-94aa-4d13-aee3-a7ca130368d5)
-    (at 81.93 106.46)
+    (at 35.61 39.15)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P1.00MHCT-ND")
@@ -624,7 +624,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 22119caa-4cb8-4e88-99a4-34bb5c57a62f)
-    (at 102.99 99.08)
+    (at 56.67 31.77)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -651,7 +651,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 225abf5d-d238-41e0-ba1c-1988b95291ea)
-    (at 102.83 105.18)
+    (at 56.51 37.87)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -678,7 +678,7 @@
 
   (footprint "Connector_PinSocket_1.27mm:PinSocket_2x05_P1.27mm_Vertical_SMD" (layer "F.Cu")
     (tedit 5A19A429) (tstamp 2371e72f-7863-4be9-b645-05a144283c5b)
-    (at 88.28 108.63)
+    (at 41.96 41.32)
     (descr "surface-mounted straight socket strip, 2x05, 1.27mm pitch, double cols (from Kicad 4.0.7!), script generated")
     (tags "Surface mounted socket strip SMD 2x05 1.27mm double row")
     (property "Digi-Key Part Number" "SAM9438-ND")
@@ -776,7 +776,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 23b4134e-f673-4f16-adaa-b5fcaa4843a7)
-    (at 158.09 92.76)
+    (at 111.77 25.45)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P4.70KHCT-ND")
@@ -822,7 +822,7 @@
 
   (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEF1) (tstamp 25321f04-0a9a-4c2b-906d-ee07871201d8)
-    (at 128.645 108.7)
+    (at 82.325 41.39)
     (descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "LED handsolder")
     (property "Digi-Key Part Number" "160-1435-1-ND")
@@ -870,7 +870,7 @@
 
   (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 278a1b56-da2d-4056-8973-7680b00e694a)
-    (at 99.06 99.06)
+    (at 52.74 31.75)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0805V472KDRAC7800CT-ND")
@@ -916,7 +916,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 2c3de5b3-7302-4fdf-b651-4bc47f0d0e55)
-    (at 96.73 105.93)
+    (at 50.41 38.62)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -943,7 +943,7 @@
 
   (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEF1) (tstamp 2ec81f0d-c68c-443e-b467-8a3f880c2644)
-    (at 79.375 124.56)
+    (at 33.055 57.25)
     (descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "LED handsolder")
     (property "Digi-Key Part Number" "160-1437-1-ND")
@@ -991,7 +991,7 @@
 
   (footprint "Capacitor_SMD:CP_Elec_4x5.8" (layer "F.Cu")
     (tedit 5BCA39CF) (tstamp 310f3d6a-eab4-4999-86e5-0dfca8871a1b)
-    (at 142.45 90.78)
+    (at 96.13 23.47)
     (descr "SMD capacitor, aluminum electrolytic, Panasonic, 4.0x5.8mm")
     (tags "capacitor electrolytic")
     (property "Digi-Key Part Number" "10-EEE-FN1A470URCT-ND")
@@ -1060,7 +1060,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 3b2fe625-5e51-42fc-b003-d6455f80f0a6)
-    (at 108.43 95.48)
+    (at 62.11 28.17)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1087,7 +1087,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 41609129-3b37-498c-a1f0-b2d4f0a606d1)
-    (at 99.78 105.18)
+    (at 53.46 37.87)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1114,7 +1114,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 42c7c312-4414-4e6a-9dbe-7bec276d4096)
-    (at 87.38 129.81)
+    (at 41.06 62.5)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809-sheet-mcu.kicad_sch")
@@ -1141,7 +1141,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 442eef38-f946-4230-9f68-b65086512331)
-    (at 84.88 114.33)
+    (at 38.56 47.02)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1168,7 +1168,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 49a454ff-7771-40a9-91bf-c956a01c4b26)
-    (at 93.68 108.98)
+    (at 47.36 41.67)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1195,7 +1195,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-23-5" (layer "F.Cu")
     (tedit 5F6F9B37) (tstamp 4c00eb97-fadc-4d8b-8ccc-39f61b570699)
-    (at 148.9 90.08)
+    (at 102.58 22.77)
     (descr "SOT, 5 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AA), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Digi-Key Part Number" "AP2112K-3.3TRG1DICT-ND")
@@ -1250,7 +1250,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 4dc8d102-0197-415b-b04f-001278dfb592)
-    (at 81.83 109.24)
+    (at 35.51 41.93)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1277,7 +1277,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-143" (layer "F.Cu")
     (tedit 61E30312) (tstamp 4f75487a-cdbf-4754-af1c-d3939a3afed2)
-    (at 67.93 117.58)
+    (at 21.61 50.27)
     (descr "SOT-143 https://www.nxp.com/docs/en/package-information/SOT143B.pdf")
     (tags "SOT-143")
     (property "Digi-Key Part Number" "1727-3884-1-ND")
@@ -1328,7 +1328,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 54aa8a28-1c47-43ba-8d52-4c23683eed36)
-    (at 76.07 143.72)
+    (at 29.75 76.41)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809-sheet-mcu.kicad_sch")
@@ -1355,7 +1355,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 54d1a979-1482-499d-b2c7-c3fac7b5d532)
-    (at 81.83 115.34)
+    (at 35.51 48.03)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1382,7 +1382,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 56b63cd4-4eef-4534-a4b5-4a16c6286f72)
-    (at 72.37 143.45)
+    (at 26.05 76.14)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P330HCT-ND")
@@ -1428,7 +1428,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 651af2f1-c27f-42b4-9e6e-b3b848faf381)
-    (at 114.53 89.38)
+    (at 68.21 22.07)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1455,7 +1455,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 6c88b283-dbcf-4ae2-997c-48c96d540a98)
-    (at 173 92.76)
+    (at 126.68 25.45)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P4.70KHCT-ND")
@@ -1501,7 +1501,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 6dddf384-fb19-4cec-9934-aa308c561fbb)
-    (at 102.83 108.23)
+    (at 56.51 40.92)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1528,7 +1528,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 6e9b8008-a289-4ed4-90d9-bce5cf9e719b)
-    (at 144.53 94.96)
+    (at 98.21 27.65)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M8RAC7867CT-ND")
@@ -1574,7 +1574,7 @@
 
   (footprint "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" (layer "F.Cu")
     (tedit 5D9F72B1) (tstamp 73211123-9844-41a2-a8bb-6de3d4b8293c)
-    (at 102.77 130.44)
+    (at 56.45 63.13)
     (descr "SOIC, 20 Pin (JEDEC MS-013AC, https://www.analog.com/media/en/package-pcb-resources/package/233848rw_20.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOIC SO")
     (property "Digi-Key Part Number" "ATSAMD11D14A-SSUTCT-ND")
@@ -1664,7 +1664,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 739eae0c-8688-405c-928c-9f63612aa7ce)
-    (at 132.99 108.66)
+    (at 86.67 41.35)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M8RAC7867CT-ND")
@@ -1710,7 +1710,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 74a91665-4c4b-4fd3-b4f1-ac9e2b6c6c65)
-    (at 96.73 108.98)
+    (at 50.41 41.67)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1737,7 +1737,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 755c4cfb-eb37-4c3b-ba00-beedb207f7bf)
-    (at 98.49 141.38)
+    (at 52.17 74.07)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P4.70KHCT-ND")
@@ -1783,7 +1783,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" (layer "F.Cu")
     (tedit 5A02FF57) (tstamp 76aa4eb6-5047-4cba-8384-7c91acfbfe0c)
-    (at 129.35 119.18)
+    (at 83.03 51.87)
     (descr "SOT-323, SC-70 Handsoldering")
     (tags "SOT-323 SC-70 Handsoldering")
     (property "Digi-Key Part Number" "1727-1143-1-ND")
@@ -1834,7 +1834,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 795f7b25-9eb1-467c-be79-7af453401cfc)
-    (at 94.03 115.08)
+    (at 47.71 47.77)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1861,7 +1861,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 7e618b7a-f9f8-4c42-942a-8fc059e380ba)
-    (at 105.38 95.48)
+    (at 59.06 28.17)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1888,7 +1888,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 7ed4ade6-b4f2-4d53-b470-fc35e34ec797)
-    (at 106.04 98.53)
+    (at 59.72 31.22)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -1915,7 +1915,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 59FED5CC) (tstamp 809f06f2-1460-4576-9394-27f5ee547eb9)
-    (at 82.08 90.18)
+    (at 35.76 22.87)
     (descr "Through hole straight pin header, 1x06, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x06 2.54mm single row")
     (property "Digi-Key Part Number" "609-2236-ND")
@@ -1974,7 +1974,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 81255740-1486-41e4-8f0a-794705d1825e)
-    (at 114.53 92.43)
+    (at 68.21 25.12)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -2001,7 +2001,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 8747a23a-01bc-41f8-87ee-d091530e1eca)
-    (at 97.08 115.08)
+    (at 50.76 47.77)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -2028,7 +2028,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 87560e76-4887-40b6-b06a-ce64e0228883)
-    (at 178.85 89.11)
+    (at 132.53 21.8)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P4.70KHCT-ND")
@@ -2074,7 +2074,7 @@
 
   (footprint "Capacitor_SMD:CP_Elec_6.3x7.7" (layer "F.Cu")
     (tedit 5BCA39D0) (tstamp 8a388ca7-bc04-49ef-a832-664d7c174fe4)
-    (at 131.65 99.98)
+    (at 85.33 32.67)
     (descr "SMD capacitor, aluminum electrolytic, Nichicon, 6.3x7.7mm")
     (tags "capacitor electrolytic")
     (property "Digi-Key Part Number" "PCE3753CT-ND")
@@ -2143,7 +2143,7 @@
 
   (footprint "Connector_USB:USB_Micro-B_Molex-105017-0001" (layer "F.Cu")
     (tedit 5A1DC0BE) (tstamp 8a5e1984-4d16-40fb-9bf2-3c849eaba772)
-    (at 75.38 113.24)
+    (at 29.06 45.93)
     (descr "http://www.molex.com/pdm_docs/sd/1050170001_sd.pdf")
     (tags "Micro-USB SMD Typ-B")
     (property "Digi-Key Part Number" "WM1399CT-ND")
@@ -2227,7 +2227,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 8adaf5c8-5508-4fc7-8e2a-2e0fe51b4df6)
-    (at 87.93 117.38)
+    (at 41.61 50.07)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -2254,7 +2254,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 8d8e50b8-f678-4add-8748-a7060b71ca8b)
-    (at 128.6 122.26)
+    (at 82.28 54.95)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P4.70KHCT-ND")
@@ -2300,7 +2300,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 8fc8c7c7-296a-4f04-9b84-0a0df9109a81)
-    (at 93.68 105.93)
+    (at 47.36 38.62)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -2327,7 +2327,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 95e8215b-a530-46a1-91b7-055402ed95ab)
-    (at 79.03 135.87)
+    (at 32.71 68.56)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P10.0KHCT-ND")
@@ -2373,7 +2373,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp 97201b21-4171-40dc-8648-2bd3bd44b5d8)
-    (at 108.43 89.38)
+    (at 62.11 22.07)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -2400,7 +2400,7 @@
 
   (footprint "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" (layer "F.Cu")
     (tedit 5CA1CA7F) (tstamp 9774c3ef-ec5e-4211-a6e7-433ba13cdf4c)
-    (at 71.33 138.405)
+    (at 25.01 71.095)
     (descr "tactile push button, 6x6mm e.g. PTS645xx series, height=9.5mm")
     (tags "tact sw push 6mm smd")
     (property "Digi-Key Part Number" "CKN11907CT-ND")
@@ -2457,7 +2457,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" (layer "F.Cu")
     (tedit 5A02FF57) (tstamp 99998797-ba3d-4087-a3e9-43feebe4285f)
-    (at 158.84 89.68)
+    (at 112.52 22.37)
     (descr "SOT-323, SC-70 Handsoldering")
     (tags "SOT-323 SC-70 Handsoldering")
     (property "Digi-Key Part Number" "1727-1143-1-ND")
@@ -2508,7 +2508,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp 9bda690d-1239-4586-b8b2-584aaf81c039)
-    (at 83.68 132.13)
+    (at 37.36 64.82)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M8RAC7867CT-ND")
@@ -2554,7 +2554,7 @@
 
   (footprint "Package_QFP:TQFP-48_7x7mm_P0.5mm" (layer "F.Cu")
     (tedit 5ECA1038) (tstamp a097cd85-31f4-4df4-9592-fabfa350e915)
-    (at 71.48 128.94)
+    (at 25.16 61.63)
     (descr "TQFP, 48 Pin (https://www.jedec.org/system/files/docs/MS-026D.pdf var ABC), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "TQFP QFP")
     (property "Digi-Key Part Number" "150-ATMEGA4809-AURCT-ND")
@@ -2720,7 +2720,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp a333e1e3-7556-4fca-a606-b21786bb9d81)
-    (at 99.78 108.23)
+    (at 53.46 40.92)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -2747,7 +2747,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp a47fa90a-9ec4-4339-82de-62bf213fb9cd)
-    (at 81.83 118.39)
+    (at 35.51 51.08)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -2774,7 +2774,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp a4a30c08-4df8-47c3-8ae7-237d3ec6ed7c)
-    (at 134.45 118.61)
+    (at 88.13 51.3)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P4.70KHCT-ND")
@@ -2820,7 +2820,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp abc78e7e-297e-491b-92ab-1f299a2d77d5)
-    (at 81.83 112.29)
+    (at 35.51 44.98)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -2847,7 +2847,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp af2f8959-2ece-401a-b612-f566b53fbdca)
-    (at 109.09 98.53)
+    (at 62.77 31.22)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -2874,7 +2874,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp af6bd2ca-e885-4742-b8e3-b5b3cbdf4d7b)
-    (at 163.94 89.11)
+    (at 117.62 21.8)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P4.70KHCT-ND")
@@ -2920,7 +2920,7 @@
 
   (footprint "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" (layer "F.Cu")
     (tedit 5B191DE1) (tstamp b00616ff-8cc6-4db4-93ab-dd5924403cd0)
-    (at 88.9 91.44)
+    (at 42.58 24.13)
     (descr "Wuerth electronics barrel jack connector (5.5mm outher diameter, inner diameter 2.05mm or 2.55mm depending on exact order number), See: http://katalog.we-online.de/em/datasheet/6941xx301002.pdf")
     (tags "connector barrel jack")
     (property "Digi-Key Part Number" "732-5930-ND")
@@ -2979,7 +2979,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 59FED5CC) (tstamp b0a80025-7b4e-420c-8e1d-743b0d24ab35)
-    (at 98.98 90.18)
+    (at 52.66 22.87)
     (descr "Through hole straight pin header, 2x03, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x03 2.54mm double row")
     (property "Digi-Key Part Number" "609-75844-101-06LF-ND")
@@ -3040,7 +3040,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp b24f178f-d6c6-4d53-b87f-223314f1371c)
-    (at 142.75 100.78)
+    (at 96.43 33.47)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809-sheet-power.kicad_sch")
@@ -3067,7 +3067,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp b6863942-8675-4111-ad56-e7b81a1e9a42)
-    (at 84.88 117.38)
+    (at 38.56 50.07)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -3094,7 +3094,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp b69bf04c-6aaf-45cb-bbab-c2954045d299)
-    (at 67.98 146.04)
+    (at 21.66 78.73)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M8RAC7867CT-ND")
@@ -3140,7 +3140,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp b7ecc36f-df4d-496f-b491-0d4d3df6933d)
-    (at 102.84 138.87)
+    (at 56.52 71.56)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P4.70KHCT-ND")
@@ -3186,7 +3186,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp b8d248ec-b40d-416e-92bd-f2144b03bfbd)
-    (at 144.53 97.47)
+    (at 98.21 30.16)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P330HCT-ND")
@@ -3232,7 +3232,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp b9c522fa-4f23-411c-b6a5-f3443a224cae)
-    (at 128.6 111.25)
+    (at 82.28 43.94)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M3RAC7867CT-ND")
@@ -3278,7 +3278,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" (layer "F.Cu")
     (tedit 5A02FF57) (tstamp bbb3a372-a393-4c9b-9af8-1798a063927a)
-    (at 173.75 89.68)
+    (at 127.43 22.37)
     (descr "SOT-323, SC-70 Handsoldering")
     (tags "SOT-323 SC-70 Handsoldering")
     (property "Digi-Key Part Number" "1727-1143-1-ND")
@@ -3329,7 +3329,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp bc9a8fd4-8aa0-4411-8bb7-6ac5f6c4a785)
-    (at 88.11 127.03)
+    (at 41.79 59.72)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C475M8PAC7867CT-ND")
@@ -3375,7 +3375,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp bd0efdf2-fdb3-4e5f-b4ee-475e7dff0aaa)
-    (at 104.28 102.13)
+    (at 57.96 34.82)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -3402,7 +3402,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp be19393d-7c3e-4436-aa64-11176874df85)
-    (at 79.33 127.11)
+    (at 33.01 59.8)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M8RAC7867CT-ND")
@@ -3448,7 +3448,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp be6a8d6a-9a7a-4327-9e46-c23f71f45623)
-    (at 112.14 98.53)
+    (at 65.82 31.22)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -3475,7 +3475,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp bf6f2aac-ba95-41dc-86fa-fa20d0736d8c)
-    (at 111.4 127.03)
+    (at 65.08 59.72)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C475M8PAC7867CT-ND")
@@ -3521,7 +3521,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp bf947fb5-df4b-4f5c-b4c5-37ec8a2c7682)
-    (at 94.03 112.03)
+    (at 47.71 44.72)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -3548,7 +3548,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp c60ebcd0-0677-4d71-96fc-769d568508c7)
-    (at 120.63 89.38)
+    (at 74.31 22.07)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -3575,7 +3575,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 59FED5CC) (tstamp c65190c5-4545-48fb-a257-45c32f60abc2)
-    (at 77.43 90.18)
+    (at 31.11 22.87)
     (descr "Through hole straight pin header, 1x08, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x08 2.54mm single row")
     (property "Digi-Key Part Number" "609-2238-ND")
@@ -3638,7 +3638,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp c6bfcb3f-0e58-406f-aa4e-f63ed2ab3d51)
-    (at 98.49 138.87)
+    (at 52.17 71.56)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M8RAC7867CT-ND")
@@ -3684,7 +3684,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp c73a21e8-68fc-4478-87f1-84af3c91f7ee)
-    (at 83.68 127.11)
+    (at 37.36 59.8)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M8RAC7867CT-ND")
@@ -3730,7 +3730,7 @@
 
   (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEF1) (tstamp c743d045-32e1-43d9-85c4-34f1b53dec2f)
-    (at 68.025 143.49)
+    (at 21.705 76.18)
     (descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "LED handsolder")
     (property "Digi-Key Part Number" "160-1437-1-ND")
@@ -3778,7 +3778,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp cd6a5c4e-07bc-4916-8276-1db16ad1bd53)
-    (at 139.05 100.51)
+    (at 92.73 33.2)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P330HCT-ND")
@@ -3824,7 +3824,7 @@
 
   (footprint "Diode_SMD:D_SOD-123F" (layer "F.Cu")
     (tedit 587F7769) (tstamp cf33af6b-07a4-44f9-af3a-8111afd1fd7e)
-    (at 129.185 105.73)
+    (at 82.865 38.42)
     (descr "D_SOD-123F")
     (tags "D_SOD-123F")
     (property "Digi-Key Part Number" "MBR120LSFT3GOSCT-ND")
@@ -3878,7 +3878,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp cf9e74fc-76fc-41c3-895e-ba0d7460abc0)
-    (at 148.23 93.83)
+    (at 101.91 26.52)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809-sheet-power.kicad_sch")
@@ -3905,7 +3905,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp d0a8ba8f-1238-4b29-b5d5-6a5b6b91a6ce)
-    (at 79.03 138.38)
+    (at 32.71 71.07)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P330HCT-ND")
@@ -3951,7 +3951,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp d165d363-d5b5-4709-934e-0efcfe82a326)
-    (at 111.48 89.38)
+    (at 65.16 22.07)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -3978,7 +3978,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp d1b6767a-bb57-4560-b00c-112d43a9e820)
-    (at 105.38 92.43)
+    (at 59.06 25.12)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -4005,7 +4005,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp d2fb1b7d-cd13-4d5a-9ffe-5859ff37b58c)
-    (at 82.73 137.42)
+    (at 36.41 70.11)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809-sheet-mcu.kicad_sch")
@@ -4032,7 +4032,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp d3f4a1f1-fe49-449e-adcd-4b91a35827b4)
-    (at 97.08 112.03)
+    (at 50.76 44.72)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -4059,7 +4059,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp d4396bcb-32c8-47e8-8ee1-1f86b147edc2)
-    (at 108.43 92.43)
+    (at 62.11 25.12)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -4086,7 +4086,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp d6be7074-d246-421d-8340-3440c2ac3d7b)
-    (at 111.48 92.43)
+    (at 65.16 25.12)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -4113,7 +4113,7 @@
 
   (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEF1) (tstamp d7e7bb2d-5580-45a2-85ff-b4a1d8109447)
-    (at 134.125 105.35)
+    (at 87.805 38.04)
     (descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags "LED handsolder")
     (property "Digi-Key Part Number" "160-1435-1-ND")
@@ -4161,7 +4161,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp e1652681-a906-43dd-8ae1-04dfa595eedf)
-    (at 83.38 134.64)
+    (at 37.06 67.33)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C104M8RAC7867CT-ND")
@@ -4207,7 +4207,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp e33168eb-b03c-4726-b179-f77231078ab5)
-    (at 117.58 92.43)
+    (at 71.26 25.12)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -4234,7 +4234,7 @@
 
   (footprint "Diode_SMD:D_SOD-123F" (layer "F.Cu")
     (tedit 587F7769) (tstamp e96b7cb3-40d5-42ec-8719-39ef3220c417)
-    (at 139.635 97.58)
+    (at 93.315 30.27)
     (descr "D_SOD-123F")
     (tags "D_SOD-123F")
     (property "Digi-Key Part Number" "MBR120LSFT3GOSCT-ND")
@@ -4288,7 +4288,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp eddff74a-492c-446d-aa69-ea1817d7530f)
-    (at 87.93 114.33)
+    (at 41.61 47.02)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -4315,7 +4315,7 @@
 
   (footprint "Package_TO_SOT_SMD:TO-252-2" (layer "F.Cu")
     (tedit 5A70A390) (tstamp f34bdb57-a483-4064-a52f-7f73f0117c12)
-    (at 132.5 91.88)
+    (at 86.18 24.57)
     (descr "TO-252 / DPAK SMD package, http://www.infineon.com/cms/en/product/packages/PG-TO252/PG-TO252-3-1/")
     (tags "DPAK TO-252 DPAK-3 TO-252-3 SOT-428")
     (property "Digi-Key Part Number" "NCP1117DT50RKGOSCT-ND")
@@ -4381,7 +4381,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp f4325bc9-bd13-4c7a-a498-36bb083c2988)
-    (at 83.68 129.62)
+    (at 37.36 62.31)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Digi-Key Part Number" "P330HCT-ND")
@@ -4427,7 +4427,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEF) (tstamp f5336f34-5833-41a6-b8a0-962f5f9fad42)
-    (at 79.33 132.13)
+    (at 33.01 64.82)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor handsolder")
     (property "Digi-Key Part Number" "399-C0603C475M8PAC7867CT-ND")
@@ -4473,7 +4473,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp f818a467-77b6-4ef7-adb7-910d81551865)
-    (at 71.72 146.23)
+    (at 25.4 78.92)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809-sheet-mcu.kicad_sch")
@@ -4500,7 +4500,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 59FED5CC) (tstamp f8c92949-5f5f-4460-8f97-f21423ee1338)
-    (at 72.78 90.18)
+    (at 26.46 22.87)
     (descr "Through hole straight pin header, 1x08, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x08 2.54mm single row")
     (property "Digi-Key Part Number" "609-2238-ND")
@@ -4563,7 +4563,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp fa15bc82-a2d4-496d-8d54-036dd4f5feda)
-    (at 111.48 95.48)
+    (at 65.16 28.17)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -4590,7 +4590,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp fa2b1f60-857d-4acf-ab43-7dbcf2f53917)
-    (at 107.33 101.58)
+    (at 61.01 34.27)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -4617,7 +4617,7 @@
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" (layer "F.Cu")
     (tedit 59FED5CC) (tstamp fc56e87c-fc2b-4bb4-8c5d-00cf0b50ffac)
-    (at 68.13 90.18)
+    (at 21.81 22.87)
     (descr "Through hole straight pin header, 1x10, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x10 2.54mm single row")
     (property "Digi-Key Part Number" "609-2240-ND")
@@ -4684,7 +4684,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp fc610a06-e9b4-485a-ba47-f20c1502489c)
-    (at 117.58 89.38)
+    (at 71.26 22.07)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
@@ -4711,7 +4711,7 @@
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
     (tedit 5A0F774F) (tstamp fd13458d-69ab-4375-9b51-7a99f0c78caa)
-    (at 101.23 102.13)
+    (at 54.91 34.82)
     (descr "SMD pad as test Point, diameter 1.0mm")
     (tags "test point SMD pad")
     (property "Sheetfile" "pcb-main-nautilus-atmega4809.kicad_sch")
