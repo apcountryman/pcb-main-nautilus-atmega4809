@@ -3801,17 +3801,26 @@
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/6f4998c9-35ba-4a7e-8293-99d38ef96a88"
       (reference "TP48") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/ca87c1fa-486e-444f-a37b-aad246fa04d6"
+    (path "/9563730f-8d1a-4fdb-af84-834004e725da/56d8167f-d220-4e5b-83a4-94898a47fd22"
       (reference "TP49") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/3ed632ff-4b66-4d51-aedd-b495dbfd4716"
+    (path "/9563730f-8d1a-4fdb-af84-834004e725da/462679ad-05aa-4201-be85-b22f33eb2536"
       (reference "TP50") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/5430374c-4f49-452d-ae3d-248e25c16910"
+    (path "/9563730f-8d1a-4fdb-af84-834004e725da/51e21b6c-7379-4fee-8880-88c911bd7f49"
       (reference "TP51") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/535baf57-8641-4121-897f-4706b098c129/419a02b9-f6be-4e9e-9a64-2270ed7cc3aa"
+    (path "/535baf57-8641-4121-897f-4706b098c129/ca87c1fa-486e-444f-a37b-aad246fa04d6"
       (reference "TP52") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/3ed632ff-4b66-4d51-aedd-b495dbfd4716"
+      (reference "TP53") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/5430374c-4f49-452d-ae3d-248e25c16910"
+      (reference "TP54") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+    )
+    (path "/535baf57-8641-4121-897f-4706b098c129/419a02b9-f6be-4e9e-9a64-2270ed7cc3aa"
+      (reference "TP55") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
     (path "/5a33ba3c-72f7-420a-981d-98ac038c5559/678f9d4d-d6a2-4e0c-8b54-d5be33abe55a"
       (reference "U1") (unit 1) (value "NCP1117-5.0_TO252") (footprint "Package_TO_SOT_SMD:TO-252-2")
