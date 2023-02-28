@@ -1683,7 +1683,7 @@
     (property "Sheetname" "")
     (path "/fc4d2fb0-0c76-42ed-93b0-5494ded56c99")
     (attr through_hole)
-    (fp_text reference "J5" (at 0 -2.33 90) (layer "F.SilkS")
+    (fp_text reference "J5" (at 0 -2.33 90) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 445270a7-90f1-4717-8aed-8e89ee87be1c)
     )
@@ -3235,7 +3235,7 @@
     (property "Sheetname" "")
     (path "/1861d396-eaf2-4961-adae-c4aecc6209ef")
     (attr through_hole)
-    (fp_text reference "J7" (at 0 -2.33 90) (layer "F.SilkS")
+    (fp_text reference "J7" (at 0 -2.33 90) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 998bc169-583f-42af-8801-8576a9f5008c)
     )
@@ -4079,7 +4079,7 @@
     (property "Sheetname" "")
     (path "/87af8cfd-fe1b-4ff4-bd02-ccb4e2f53955")
     (attr through_hole)
-    (fp_text reference "J8" (at 0 -2.33 90) (layer "F.SilkS")
+    (fp_text reference "J8" (at 0 -2.33 90) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 1b55e6e6-20c3-416b-9cea-33bd3e490c24)
     )
@@ -4142,7 +4142,7 @@
     (property "Sheetname" "")
     (path "/7e8ccd1c-1c23-465e-a76d-7a1689ced81a")
     (attr through_hole)
-    (fp_text reference "J6" (at 0 -2.33 90) (layer "F.SilkS")
+    (fp_text reference "J6" (at 0 -2.33 90) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 086e4169-6fb5-454b-b8c8-994e655ec5a7)
     )
