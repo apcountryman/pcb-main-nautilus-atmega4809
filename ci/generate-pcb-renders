@@ -93,7 +93,7 @@ function generate_pcb_renders()
 
             for format in "${formats[@]}"; do
                 for side in "${sides[@]}"; do
-                    if ! "$repository/utilities/PcbDraw/pcbdraw/pcbdraw.py" --side "$side" "$layout" "$repository/$project_name-pcb-renders/$project_name-$side.$format"; then
+                    if ! pcbdraw --side "$side" "$layout" "$repository/$project_name-pcb-renders/$project_name-$side.$format"; then
                         abort
                     fi
                 done
