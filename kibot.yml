@@ -43,7 +43,7 @@ outputs:
           sketch_pads_on_fab_layers: false
           subtract_mask_from_silk: false
           tent_vias: false
-          uppercase_externsions: false
+          uppercase_extensions: false
           use_aux_axis_as_origin: true
           use_gerber_net_attributes: true
           use_gerber_x2_attributes: false
