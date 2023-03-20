@@ -66,7 +66,7 @@ function check_design_rules_compliance()
     local layouts; mapfile -t layouts < <( git -C "$repository" ls-files '*.kicad_pcb' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly layouts
 
     for layout in "${layouts[@]}"; do
-        if ! "$repository/utilities/KiAuto/src/pcbnew_do" run_drc "$layout" "$repository"; then
+        if ! "$repository/utilities/KiAuto/src/pcbnew_do" run_drc --force_gui "$layout" "$repository"; then
             cat "$repository/"*.rpt
             abort
         fi
