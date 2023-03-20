@@ -117,7 +117,7 @@ jobs:
               run: sudo add-apt-repository --yes ppa:kicad/kicad-6.0-releases && sudo apt update && sudo apt install kicad python3-wxgtk4.0 python3-xvfbwrapper
             - name: Generate BOM
               shell: bash
-              run: ./ci/generate-bom --bom-type interactive
+              run: xvfb-run --auto-servernum ./ci/generate-bom --bom-type interactive
             - name: Archive generated BOM
               uses: actions/upload-artifact@v2
               with:
