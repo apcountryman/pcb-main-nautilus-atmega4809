@@ -105,6 +105,26 @@ jobs:
               shell: bash
               run: ./ci/check-design-rules-compliance
 
+    generate-bom-interactive:
+        name: Generate BOM - interactive
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  submodules: recursive
+            - name: Install dependencies
+              shell: bash
+              run: sudo add-apt-repository --yes ppa:kicad/kicad-6.0-releases && sudo apt update && sudo apt install kicad python3-psutil python3-xlsxwriter python3-xvfbwrapper xdotool
+            - name: Generate BOM
+              shell: bash
+              run: ./ci/generate-bom --bom-type interactive
+            - name: Archive generated BOM
+              uses: actions/upload-artifact@v2
+              with:
+                  name: pcb-main-nautilus-atmega4809-bom-interactive
+                  path: pcb-main-nautilus-atmega4809-bom-interactive
+                  retention-days: 7
+
     generate-bom-traditional:
         name: Generate BOM - traditional
         runs-on: ubuntu-20.04

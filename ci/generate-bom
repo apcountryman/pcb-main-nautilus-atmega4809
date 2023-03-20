@@ -47,6 +47,7 @@ function display_help_text()
     echo "    --bom-type <bom-type>"
     echo "        Specify the type of BOM to generate. The following BOM types are"
     echo "        supported:"
+    echo "            interactive"
     echo "            traditional"
     echo "    --help"
     echo "        Display this help text."
@@ -55,6 +56,7 @@ function display_help_text()
     echo "EXAMPLES"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
+    echo "    $mnemonic --bom-type interactive"
     echo "    $mnemonic --bom-type traditional"
 }
 
@@ -72,6 +74,27 @@ function populate_version()
             abort
         fi
     done
+}
+
+function generate_bom_interactive()
+{
+    local projects; mapfile -t projects < <( git -C "$repository" ls-files '*.kicad_pro' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly projects
+
+    if [[ "${#projects[@]}" -gt 1 ]]; then
+        abort "multiple projects found: ${projects[*]}"
+    fi
+
+    if [[ "${#projects[@]}" -eq 1 ]]; then
+        local -r project="${projects[0]}"
+        local -r project_name=$( basename -s .kicad_pro "$project" )
+        local -r layout="$repository/$project_name.kicad_pcb"
+
+        if git -C "$repository" ls-files --error-unmatch "$layout"; then
+            if ! "$repository/utilities/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py" --no-browser --dest-dir "$repository/$project_name-bom-interactive"; then
+                abort
+            fi
+        fi
+    fi
 }
 
 function generate_bom_traditional()
@@ -139,7 +162,7 @@ function main()
 
                 local -r bom_type="$1"; shift
 
-                if [[ "$bom_type" != "traditional" ]]; then
+                if [[ "$bom_type" != "traditional" && "$bom_type" != "interactive" ]]; then
                     abort "'$bom_type' is not a supported BOM type"
                 fi
                 ;;
