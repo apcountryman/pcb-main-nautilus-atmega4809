@@ -90,7 +90,7 @@ function generate_bom_interactive()
         local -r layout="$repository/$project_name.kicad_pcb"
 
         if git -C "$repository" ls-files --error-unmatch "$layout"; then
-            if ! "$repository/utilities/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py" --no-browser --dest-dir "$repository/$project_name-bom-interactive" "$layout"; then
+            if ! "$repository/utilities/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py" --no-browser --dest-dir "$repository" --name-format "$project_name-bom-interactive" --include-tracks --include-nets "$layout"; then
                 abort
             fi
         fi

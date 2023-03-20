@@ -122,7 +122,7 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                   name: pcb-main-nautilus-atmega4809-bom-interactive
-                  path: pcb-main-nautilus-atmega4809-bom-interactive
+                  path: pcb-main-nautilus-atmega4809-bom-interactive.html
                   retention-days: 7
 
     generate-bom-traditional:
