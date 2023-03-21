@@ -164,23 +164,3 @@ jobs:
                   name: pcb-main-nautilus-atmega4809-production-files
                   path: pcb-main-nautilus-atmega4809-production-files
                   retention-days: 7
-
-    generate-pcb-renders:
-        name: Generate PCB renders
-        runs-on: ubuntu-20.04
-        steps:
-            - uses: actions/checkout@v2
-              with:
-                  submodules: recursive
-            - name: Install dependencies
-              shell: bash
-              run: sudo add-apt-repository --yes ppa:kicad/kicad-6.0-releases && sudo apt update && sudo apt install kicad python3-lxml python3-numpy python3-wand && sudo pip install pcbnewTransition svgpathtools ./utilities/PcbDraw
-            - name: Generate PCB renders
-              shell: bash
-              run: ./ci/generate-pcb-renders
-            - name: Archive generated BOM
-              uses: actions/upload-artifact@v2
-              with:
-                  name: pcb-main-nautilus-atmega4809-pcb-renders
-                  path: pcb-main-nautilus-atmega4809-pcb-renders
-                  retention-days: 7

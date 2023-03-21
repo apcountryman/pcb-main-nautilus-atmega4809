@@ -39,6 +39,3 @@
 [submodule "utilities/kicad-library-utils"]
 	path = utilities/kicad-library-utils
 	url = ../kicad-library-utils
-[submodule "utilities/PcbDraw"]
-	path = utilities/PcbDraw
-	url = ../PcbDraw
