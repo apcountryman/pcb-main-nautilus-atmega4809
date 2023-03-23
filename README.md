@@ -2,7 +2,8 @@
 [![CI](https://github.com/apcountryman/pcb-main-nautilus-atmega4809/actions/workflows/ci.yml/badge.svg)](https://github.com/apcountryman/pcb-main-nautilus-atmega4809/actions/workflows/ci.yml)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-A Microchip ATmega4809 based mainboard PCB.
+A Microchip ATmega4809 based mainboard PCB that uses a form factor similar to the Arduino
+Uno Rev3.
 
 ## Obtaining the Source Code
 HTTPS:
