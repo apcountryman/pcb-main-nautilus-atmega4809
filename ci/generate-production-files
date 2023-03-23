@@ -15,7 +15,8 @@
 # KIND, either express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-# Description: pcb-main-nautilus-atmega4809 repository CI BOM generation script.
+# Description: pcb-main-nautilus-atmega4809 repository CI production files generation
+#       script.
 
 function error()
 {
@@ -38,17 +39,12 @@ function abort()
 function display_help_text()
 {
     echo "NAME"
-    echo "    $mnemonic - Generate project BOM."
+    echo "    $mnemonic - Generate production files for the project."
     echo "SYNOPSIS"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --bom-type <bom-type>"
+    echo "    $mnemonic"
     echo "OPTIONS"
-    echo "    --bom-type <bom-type>"
-    echo "        Specify the type of BOM to generate. The following BOM types are"
-    echo "        supported:"
-    echo "            interactive"
-    echo "            traditional"
     echo "    --help"
     echo "        Display this help text."
     echo "    --version"
@@ -56,8 +52,7 @@ function display_help_text()
     echo "EXAMPLES"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
-    echo "    $mnemonic --bom-type interactive"
-    echo "    $mnemonic --bom-type traditional"
+    echo "    $mnemonic"
 }
 
 function display_version()
@@ -76,7 +71,7 @@ function populate_version()
     done
 }
 
-function generate_bom_interactive()
+function generate_production_files()
 {
     local projects; mapfile -t projects < <( git -C "$repository" ls-files '*.kicad_pro' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly projects
 
@@ -90,54 +85,11 @@ function generate_bom_interactive()
         local -r layout="$repository/$project_name.kicad_pcb"
 
         if git -C "$repository" ls-files --error-unmatch "$layout"; then
-            if ! "$repository/utilities/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py" --no-browser --dest-dir "$repository" --name-format "$project_name-bom-interactive" --include-tracks --include-nets "$layout"; then
+            if ! "$repository/utilities/KiBot/src/kibot" -b "$layout" -c "$repository/kibot.yml" -d "$repository/$project_name-production-files"; then
                 abort
             fi
         fi
     fi
-}
-
-function generate_bom_traditional()
-{
-    local projects; mapfile -t projects < <( git -C "$repository" ls-files '*.kicad_pro' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly projects
-
-    if [[ "${#projects[@]}" -gt 1 ]]; then
-        abort "multiple projects found: ${projects[*]}"
-    fi
-
-    if [[ "${#projects[@]}" -eq 1 ]]; then
-        local -r project="${projects[0]}"
-        local -r project_name=$( basename -s .kicad_pro "$project" )
-        local -r schematic="$repository/$project_name.kicad_sch"
-        local -r kibom_configuration_file="$repository/kibom.ini"
-
-        if git -C "$repository" ls-files --error-unmatch "$schematic"; then
-            # KiAuto documentation refers to the following file as "the project's XML
-            # BoM", but it will be used as KiBoM's "netlist" positional argument
-            local -r netlist="$repository/$project_name.xml"
-
-            if ! "$repository/utilities/KiAuto/src/eeschema_do" bom_xml "$schematic" "$repository/temp"; then
-                abort
-            fi
-
-            if ! rm -rf "$repository/$project_name-bom-traditional/"; then
-                abort
-            fi
-
-            local -r formats=( "csv" "html" "tsv" "txt" "xlsx" "xml" )
-
-            for format in "${formats[@]}"; do
-                if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" --cfg "$kibom_configuration_file" -d "$repository/$project_name-bom-traditional" "$netlist" "$project_name-bom-traditional.$format"; then
-                    abort
-                fi
-            done
-        fi
-    fi
-}
-
-function generate_bom()
-{
-    "generate_bom_$bom_type"
 }
 
 function main()
@@ -151,21 +103,6 @@ function main()
         local argument="$1"; shift
 
         case "$argument" in
-            --bom-type)
-                if [[ -n "$bom_type" ]]; then
-                    abort "BOM type already specified"
-                fi
-
-                if [[ "$#" -le 0 ]]; then
-                    abort "BOM type not specified"
-                fi
-
-                local -r bom_type="$1"; shift
-
-                if [[ "$bom_type" != "traditional" && "$bom_type" != "interactive" ]]; then
-                    abort "'$bom_type' is not a supported BOM type"
-                fi
-                ;;
             --help)
                 display_help_text
                 exit
@@ -185,12 +122,8 @@ function main()
         esac
     done
 
-    if [[ -z "$bom_type" ]]; then
-        abort "'--bom-type' must be specified"
-    fi
-
     populate_version
-    generate_bom
+    generate_production_files
 }
 
 main "$@"

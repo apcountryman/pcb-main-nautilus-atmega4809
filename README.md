@@ -2,7 +2,8 @@
 [![CI](https://github.com/apcountryman/pcb-main-nautilus-atmega4809/actions/workflows/ci.yml/badge.svg)](https://github.com/apcountryman/pcb-main-nautilus-atmega4809/actions/workflows/ci.yml)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-A Microchip ATmega4809 based mainboard PCB.
+A Microchip ATmega4809 based mainboard PCB that uses a form factor similar to the Arduino
+Uno Rev3.
 
 ## Obtaining the Source Code
 HTTPS:
@@ -13,6 +14,10 @@ SSH:
 ```shell
 git clone --recurse-submodules git@github.com:apcountryman/pcb-main-nautilus-atmega4809.git
 ```
+
+## Board Setup
+The board setup uses OSH Park's 4 layer board stackup and design rules which can be found
+at https://docs.oshpark.com/services/ and https://docs.oshpark.com/services/four-layer/.
 
 ## Usage
 This repository's Git `pre-commit` hook script is the simplest way to test this project

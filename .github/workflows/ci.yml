@@ -91,6 +91,40 @@ jobs:
                   path: pcb-main-nautilus-atmega4809-schematic-pdf
                   retention-days: 7
 
+    check-design-rules-compliance:
+        name: Check design rules compliance
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  submodules: recursive
+            - name: Install dependencies
+              shell: bash
+              run: sudo add-apt-repository --yes ppa:kicad/kicad-6.0-releases && sudo apt update && sudo apt install kicad python3-psutil python3-xvfbwrapper xdotool
+            - name: Check design rules compliance
+              shell: bash
+              run: ./ci/check-design-rules-compliance
+
+    generate-bom-interactive:
+        name: Generate BOM - interactive
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  submodules: recursive
+            - name: Install dependencies
+              shell: bash
+              run: sudo add-apt-repository --yes ppa:kicad/kicad-6.0-releases && sudo apt update && sudo apt install kicad python3-wxgtk4.0 python3-xvfbwrapper
+            - name: Generate BOM
+              shell: bash
+              run: xvfb-run --auto-servernum ./ci/generate-bom --bom-type interactive
+            - name: Archive generated BOM
+              uses: actions/upload-artifact@v2
+              with:
+                  name: pcb-main-nautilus-atmega4809-bom-interactive
+                  path: pcb-main-nautilus-atmega4809-bom-interactive.html
+                  retention-days: 7
+
     generate-bom-traditional:
         name: Generate BOM - traditional
         runs-on: ubuntu-20.04
@@ -109,4 +143,24 @@ jobs:
               with:
                   name: pcb-main-nautilus-atmega4809-bom-traditional
                   path: pcb-main-nautilus-atmega4809-bom-traditional
+                  retention-days: 7
+
+    generate-production-files:
+        name: Generate production files
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  submodules: recursive
+            - name: Install dependencies
+              shell: bash
+              run: sudo add-apt-repository --yes ppa:kicad/kicad-6.0-releases && sudo apt update && sudo apt install kicad
+            - name: Generate production files
+              shell: bash
+              run: ./ci/generate-production-files
+            - name: Archive generated production files
+              uses: actions/upload-artifact@v2
+              with:
+                  name: pcb-main-nautilus-atmega4809-production-files
+                  path: pcb-main-nautilus-atmega4809-production-files
                   retention-days: 7
