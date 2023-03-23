@@ -158,7 +158,7 @@ jobs:
             - name: Generate production files
               shell: bash
               run: ./ci/generate-production-files
-            - name: Archive generated BOM
+            - name: Archive generated production files
               uses: actions/upload-artifact@v2
               with:
                   name: pcb-main-nautilus-atmega4809-production-files
