@@ -30,7 +30,7 @@ jobs:
         name: Analyze (static) - shellcheck
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - name: Analyze
               shell: bash
               run: ./ci/analyze --analyzer shellcheck
@@ -39,7 +39,7 @@ jobs:
         name: Check KLC compliance - symbols
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: recursive
             - name: Check KLC compliance
@@ -50,7 +50,7 @@ jobs:
         name: Check KLC compliance - footprints
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: recursive
             - name: Check KLC compliance
@@ -61,7 +61,7 @@ jobs:
         name: Check electrical rules compliance
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: recursive
             - name: Install dependencies
@@ -75,7 +75,7 @@ jobs:
         name: Generate schematic PDF
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: recursive
             - name: Install dependencies
@@ -95,7 +95,7 @@ jobs:
         name: Check design rules compliance
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: recursive
             - name: Install dependencies
@@ -109,7 +109,7 @@ jobs:
         name: Generate BOM - interactive
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: recursive
             - name: Install dependencies
@@ -129,7 +129,7 @@ jobs:
         name: Generate BOM - traditional
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: recursive
             - name: Install dependencies
@@ -149,7 +149,7 @@ jobs:
         name: Generate production files
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: recursive
             - name: Install dependencies
