@@ -85,7 +85,7 @@ jobs:
               shell: bash
               run: ./ci/generate-schematic-pdf
             - name: Archive generated schematic PDF
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: pcb-main-nautilus-atmega4809-schematic-pdf
                   path: pcb-main-nautilus-atmega4809-schematic-pdf
@@ -119,7 +119,7 @@ jobs:
               shell: bash
               run: xvfb-run --auto-servernum ./ci/generate-bom --bom-type interactive
             - name: Archive generated BOM
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: pcb-main-nautilus-atmega4809-bom-interactive
                   path: pcb-main-nautilus-atmega4809-bom-interactive.html
@@ -139,7 +139,7 @@ jobs:
               shell: bash
               run: ./ci/generate-bom --bom-type traditional
             - name: Archive generated BOM
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: pcb-main-nautilus-atmega4809-bom-traditional
                   path: pcb-main-nautilus-atmega4809-bom-traditional
@@ -159,7 +159,7 @@ jobs:
               shell: bash
               run: ./ci/generate-production-files
             - name: Archive generated production files
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: pcb-main-nautilus-atmega4809-production-files
                   path: pcb-main-nautilus-atmega4809-production-files
