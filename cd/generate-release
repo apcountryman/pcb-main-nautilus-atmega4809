@@ -1,0 +1,233 @@
+#!/usr/bin/env bash
+
+# pcb-main-nautilus-atmega4809
+#
+# Copyright 2022-2023, Andrew Countryman <apcountryman@gmail.com> and the
+# pcb-main-nautilus-atmega4809 contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+# file except in compliance with the License. You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software distributed under
+# the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied. See the License for the specific language governing
+# permissions and limitations under the License.
+
+# Description: pcb-main-nautilus-atmega4809 repository CD release generation script.
+
+function error()
+{
+    local -r message="$1"
+
+    ( >&2 echo "$mnemonic: $message" )
+}
+
+function abort()
+{
+    if [[ "$#" -gt 0 ]]; then
+        local -r message="$1"
+
+        error "$message, aborting"
+    fi
+
+    exit 1
+}
+
+function display_help_text()
+{
+    echo "NAME"
+    echo "    $mnemonic - Generate release."
+    echo "SYNOPSIS"
+    echo "    $mnemonic --help"
+    echo "    $mnemonic --version"
+    echo "    $mnemonic"
+    echo "OPTIONS"
+    echo "    --help"
+    echo "        Display this help text."
+    echo "    --version"
+    echo "        Display the version of this script."
+    echo "EXAMPLES"
+    echo "    $mnemonic --help"
+    echo "    $mnemonic --version"
+    echo "    $mnemonic"
+}
+
+function display_version()
+{
+    echo "$mnemonic, version $version"
+}
+
+function populate_version()
+{
+    local files; mapfile -t files < <( git -C "$repository" grep --files-with-matches 'GIT_VERSION' -- ':!:ci/' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly files
+
+    for file in "${files[@]}"; do
+        if ! sed -i -e "s/GIT_VERSION/$version/g" "$file"; then
+            abort
+        fi
+    done
+}
+
+function check_klc_compliance_symbol()
+{
+    local symbols; mapfile -t symbols < <( git -C "$repository" ls-files '*.kicad_sym' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly symbols
+
+    if [[ "${#symbols[@]}" -ne 0 ]]; then
+        if ! "$repository/utilities/kicad-library-utils/klc-check/check_symbol.py" -s -vv "${symbols[@]}"; then
+            abort
+        fi
+    fi
+}
+
+function check_klc_compliance_footprint()
+{
+    local footprints; mapfile -t footprints < <( git -C "$repository" ls-files '*.kicad_mod' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly footprints
+
+    if [[ "${#footprints[@]}" -ne 0 ]]; then
+        if ! "$repository/utilities/kicad-library-utils/klc-check/check_footprint.py" -s -vv "${footprints[@]}"; then
+            abort
+        fi
+    fi
+}
+
+function check_electrical_rules_compliance()
+{
+    local schematics; mapfile -t schematics < <( git -C "$repository" ls-files '*.kicad_sch' ':!:*-sheet-*.kicad_sch' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly schematics
+
+    for schematic in "${schematics[@]}"; do
+        if ! "$repository/utilities/KiAuto/src/eeschema_do" run_erc "$schematic" "$repository"; then
+            cat "$repository/"*.erc
+            abort
+        fi
+    done
+}
+
+function check_design_rules_compliance()
+{
+    local layouts; mapfile -t layouts < <( git -C "$repository" ls-files '*.kicad_pcb' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly layouts
+
+    for layout in "${layouts[@]}"; do
+        if ! "$repository/utilities/KiAuto/src/pcbnew_do" run_drc --force_gui "$layout" "$repository"; then
+            cat "$repository/"*.rpt
+            abort
+        fi
+    done
+}
+
+function generate_schematic_pdf()
+{
+    if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$repository/$project_name-schematic-pdf"; then
+        abort
+    fi
+}
+
+function generate_bom_traditional()
+{
+    local -r kibom_configuration_file="$repository/kibom.ini"
+
+    # KiAuto documentation refers to the following file as "the project's XML BoM", but it
+    # will be used as KiBoM's "netlist" positional argument
+    local -r netlist="$repository/$project_name.xml"
+
+    if ! "$repository/utilities/KiAuto/src/eeschema_do" bom_xml "$schematic" "$repository/temp"; then
+        abort
+    fi
+
+    if ! rm -rf "$repository/$project_name-bom-traditional/"; then
+        abort
+    fi
+
+    local -r formats=( "csv" "html" "tsv" "txt" "xlsx" "xml" )
+
+    for format in "${formats[@]}"; do
+        if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" --cfg "$kibom_configuration_file" -d "$repository/$project_name-bom-traditional" "$netlist" "$project_name-bom-traditional.$format"; then
+            abort
+        fi
+    done
+}
+
+function generate_bom_interactive()
+{
+    if ! "$repository/utilities/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py" --no-browser --dest-dir "$repository" --name-format "$project_name-bom-interactive" --include-tracks --include-nets "$layout"; then
+        abort
+    fi
+}
+
+function generate_production_files()
+{
+    if ! "$repository/utilities/KiBot/src/kibot" -b "$layout" -c "$repository/kibot.yml" -d "$repository/$project_name-production-files"; then
+        abort
+    fi
+}
+
+function generate_release()
+{
+    check_klc_compliance_symbol
+    check_klc_compliance_footprint
+    check_electrical_rules_compliance
+    check_design_rules_compliance
+
+    local projects; mapfile -t projects < <( git -C "$repository" ls-files '*.kicad_pro' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly projects
+
+    if [[ "${#projects[@]}" -gt 1 ]]; then
+        abort "multiple projects found: ${projects[*]}"
+    fi
+
+    if [[ "${#projects[@]}" -lt 1 ]]; then
+        abort "no projects found"
+    fi
+
+    local -r project="${projects[0]}"
+    local -r project_name=$( basename -s .kicad_pro "$project" )
+    local -r schematic="$repository/$project_name.kicad_sch"
+    local -r layout="$repository/$project_name.kicad_pcb"
+
+    generate_schematic_pdf
+    generate_bom_traditional
+    generate_bom_interactive
+    generate_production_files
+
+    local schematic_sheets; mapfile -t schematic_sheets < <( git -C "$repository" ls-files '*-sheet-*.kicad_sch' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly schematic_sheets
+
+    if ! zip "$project_name-$version.zip" "$project" "$schematic" "${schematic_sheets[*]}" "$layout" "$repository/$project_name-schematic-pdf" "$repository/$project_name-bom-traditional" "$repository/$project_name-bom-interactive" "$repository/$project_name-production-files"; then
+        abort
+    fi
+}
+
+function main()
+{
+    local -r script=$( readlink -f "$0" )
+    local -r mnemonic=$( basename "$script" )
+    local -r repository=$( readlink -f "$( dirname "$script" )/.." )
+    local -r version=$( git -C "$repository" describe --match=none --always --dirty --broken )
+
+    while [[ "$#" -gt 0 ]]; do
+        local argument="$1"; shift
+
+        case "$argument" in
+            --help)
+                display_help_text
+                exit
+                ;;
+            --version)
+                display_version
+                exit
+                ;;
+            --*)
+                ;&
+            -*)
+                abort "'$argument' is not a supported option"
+                ;;
+            *)
+                abort "'$argument' is not a valid argument"
+                ;;
+        esac
+    done
+
+    populate_version
+    generate_release
+}
+
+main "$@"
