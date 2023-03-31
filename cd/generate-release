@@ -116,49 +116,89 @@ function check_design_rules_compliance()
     done
 }
 
+function archive_kicad_files()
+{
+    local kicad_files; mapfile -t kicad_files < <( git -C "$repository" ls-files '*.kicad_pro' '*.kicad_sch' '*.kicad_pcb' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly kicad_files
+
+    if ! zip -ur "$release_archive" "${kicad_files[@]}"; then
+        abort
+    fi
+}
+
 function generate_schematic_pdf()
 {
-    if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$repository/$project_name-schematic-pdf"; then
-        abort
+    local -r schematic="$repository/$project_name.kicad_sch"
+
+    if git -C "$repository" ls-files --error-unmatch "$schematic"; then
+        if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$repository/$project_name-schematic-pdf"; then
+            abort
+        fi
+
+        if ! zip -ur "$release_archive" "$repository/$project_name-schematic-pdf"; then
+            abort
+        fi
     fi
 }
 
 function generate_bom_traditional()
 {
+    local -r schematic="$repository/$project_name.kicad_sch"
     local -r kibom_configuration_file="$repository/kibom.ini"
 
-    # KiAuto documentation refers to the following file as "the project's XML BoM", but it
-    # will be used as KiBoM's "netlist" positional argument
-    local -r netlist="$repository/$project_name.xml"
+    if git -C "$repository" ls-files --error-unmatch "$schematic"; then
+        # KiAuto documentation refers to the following file as "the project's XML
+        # BoM", but it will be used as KiBoM's "netlist" positional argument
+        local -r netlist="$repository/$project_name.xml"
 
-    if ! "$repository/utilities/KiAuto/src/eeschema_do" bom_xml "$schematic" "$repository/temp"; then
-        abort
-    fi
-
-    if ! rm -rf "$repository/$project_name-bom-traditional/"; then
-        abort
-    fi
-
-    local -r formats=( "csv" "html" "tsv" "txt" "xlsx" "xml" )
-
-    for format in "${formats[@]}"; do
-        if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" --cfg "$kibom_configuration_file" -d "$repository/$project_name-bom-traditional" "$netlist" "$project_name-bom-traditional.$format"; then
+        if ! "$repository/utilities/KiAuto/src/eeschema_do" bom_xml "$schematic" "$repository/temp"; then
             abort
         fi
-    done
+
+        if ! rm -rf "$repository/$project_name-bom-traditional/"; then
+            abort
+        fi
+
+        local -r formats=( "csv" "html" "tsv" "txt" "xlsx" "xml" )
+
+        for format in "${formats[@]}"; do
+            if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" --cfg "$kibom_configuration_file" -d "$repository/$project_name-bom-traditional" "$netlist" "$project_name-bom-traditional.$format"; then
+                abort
+            fi
+        done
+
+        if ! zip -ur "$release_archive" "$repository/$project_name-bom-traditional"; then
+            abort
+        fi
+    fi
 }
 
 function generate_bom_interactive()
 {
-    if ! "$repository/utilities/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py" --no-browser --dest-dir "$repository" --name-format "$project_name-bom-interactive" --include-tracks --include-nets "$layout"; then
-        abort
+    local -r layout="$repository/$project_name.kicad_pcb"
+
+    if git -C "$repository" ls-files --error-unmatch "$layout"; then
+        if ! "$repository/utilities/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py" --no-browser --dest-dir "$repository" --name-format "$project_name-bom-interactive" --include-tracks --include-nets "$layout"; then
+            abort
+        fi
+
+        if ! zip -ur "$release_archive" "$repository/$project_name-bom-interactive"; then
+            abort
+        fi
     fi
 }
 
 function generate_production_files()
 {
-    if ! "$repository/utilities/KiBot/src/kibot" -b "$layout" -c "$repository/kibot.yml" -d "$repository/$project_name-production-files"; then
-        abort
+    local -r layout="$repository/$project_name.kicad_pcb"
+
+    if git -C "$repository" ls-files --error-unmatch "$layout"; then
+        if ! "$repository/utilities/KiBot/src/kibot" -b "$layout" -c "$repository/kibot.yml" -d "$repository/$project_name-production-files"; then
+            abort
+        fi
+
+        if ! zip -ur "$release_archive" "$repository/$project_name-production_files"; then
+            abort
+        fi
     fi
 }
 
@@ -181,19 +221,15 @@ function generate_release()
 
     local -r project="${projects[0]}"
     local -r project_name=$( basename -s .kicad_pro "$project" )
-    local -r schematic="$repository/$project_name.kicad_sch"
-    local -r layout="$repository/$project_name.kicad_pcb"
+
+    local -r release_archive="$repository/$project_name-$version.zip"
+
+    archive_kicad_files
 
     generate_schematic_pdf
     generate_bom_traditional
     generate_bom_interactive
     generate_production_files
-
-    local schematic_sheets; mapfile -t schematic_sheets < <( git -C "$repository" ls-files '*-sheet-*.kicad_sch' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly schematic_sheets
-
-    if ! zip "$project_name-$version.zip" "$project" "$schematic" "${schematic_sheets[*]}" "$layout" "$repository/$project_name-schematic-pdf" "$repository/$project_name-bom-traditional" "$repository/$project_name-bom-interactive" "$repository/$project_name-production-files"; then
-        abort
-    fi
 }
 
 function main()
