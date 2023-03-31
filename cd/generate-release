@@ -181,7 +181,7 @@ function generate_bom_interactive()
             abort
         fi
 
-        if ! zip -ur "$release_archive" "$repository/$project_name-bom-interactive"; then
+        if ! zip -ur "$release_archive" "$repository/$project_name-bom-interactive.html"; then
             abort
         fi
     fi
