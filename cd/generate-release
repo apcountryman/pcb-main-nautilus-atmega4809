@@ -196,7 +196,7 @@ function generate_production_files()
             abort
         fi
 
-        if ! zip -ur "$release_archive" "$repository/$project_name-production_files"; then
+        if ! zip -ur "$release_archive" "$repository/$project_name-production-files"; then
             abort
         fi
     fi
