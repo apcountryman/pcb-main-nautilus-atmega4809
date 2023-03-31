@@ -22,7 +22,7 @@ on:
         tags:
             - production-**
             - prototype-**
-            - test-**
+            - test
 
 jobs:
     generate-release:
