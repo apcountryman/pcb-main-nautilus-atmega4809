@@ -62,7 +62,7 @@ function display_version()
 
 function populate_version()
 {
-    local files; mapfile -t files < <( git -C "$repository" grep --files-with-matches 'GIT_VERSION' -- ':!:ci/' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly files
+    local files; mapfile -t files < <( git -C "$repository" grep --files-with-matches 'GIT_VERSION' -- ':!:ci/' ':!:cd/' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly files
 
     for file in "${files[@]}"; do
         if ! sed -i -e "s/GIT_VERSION/$version/g" "$file"; then
