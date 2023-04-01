@@ -41,4 +41,4 @@ jobs:
             - name: Upload release
               uses: svenstaro/upload-release-action@v2
               with:
-                  file: pcb-main-nautilus-atmega4809-${{ github.ref_name }}.zip
+                  file: pcb-main-nautilus-atmega4809-${{ github.ref_name }}-hardware-files.zip
