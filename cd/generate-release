@@ -120,7 +120,17 @@ function archive_kicad_files()
 {
     local kicad_files; mapfile -t kicad_files < <( git -C "$repository" ls-files '*.kicad_pro' '*.kicad_sch' '*.kicad_pcb' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly kicad_files
 
-    if ! zip -ur "$release_archive" "${kicad_files[@]}"; then
+    if ! mkdir -p "$hardware_files_absolute/kicad"; then
+        abort
+    fi
+
+    for kicad_file in "${kicad_files[@]}"; do
+        if ! cp "$kicad_file" "$hardware_files_absolute/kicad"; then
+            abort
+        fi
+    done
+
+    if ! ( cd "$repository" && zip -ur "$hardware_files_archive" "$hardware_files_relative/kicad" ); then
         abort
     fi
 }
@@ -130,11 +140,11 @@ function generate_schematic_pdf()
     local -r schematic="$repository/$project_name.kicad_sch"
 
     if git -C "$repository" ls-files --error-unmatch "$schematic"; then
-        if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$repository/$project_name-schematic-pdf"; then
+        if ! "$repository/utilities/KiAuto/src/eeschema_do" export -a "$schematic" "$hardware_files_absolute/schematic-pdf"; then
             abort
         fi
 
-        if ! zip -ur "$release_archive" "$repository/$project_name-schematic-pdf"; then
+        if ! ( cd "$repository" && zip -ur "$hardware_files_archive" "$hardware_files_relative/schematic-pdf" ); then
             abort
         fi
     fi
@@ -154,19 +164,19 @@ function generate_bom_traditional()
             abort
         fi
 
-        if ! rm -rf "$repository/$project_name-bom-traditional/"; then
+        if ! rm -rf "$hardware_files_absolute/bom-traditional"; then
             abort
         fi
 
         local -r formats=( "csv" "html" "tsv" "txt" "xlsx" "xml" )
 
         for format in "${formats[@]}"; do
-            if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" --cfg "$kibom_configuration_file" -d "$repository/$project_name-bom-traditional" "$netlist" "$project_name-bom-traditional.$format"; then
+            if ! "$repository/utilities/KiBoM/KiBOM_CLI.py" --cfg "$kibom_configuration_file" -d "$hardware_files_absolute/bom-traditional" "$netlist" "$project_name-bom-traditional.$format"; then
                 abort
             fi
         done
 
-        if ! zip -ur "$release_archive" "$repository/$project_name-bom-traditional"; then
+        if ! ( cd "$repository" && zip -ur "$hardware_files_archive" "$hardware_files_relative/bom-traditional" ); then
             abort
         fi
     fi
@@ -177,11 +187,11 @@ function generate_bom_interactive()
     local -r layout="$repository/$project_name.kicad_pcb"
 
     if git -C "$repository" ls-files --error-unmatch "$layout"; then
-        if ! "$repository/utilities/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py" --no-browser --dest-dir "$repository" --name-format "$project_name-bom-interactive" --include-tracks --include-nets "$layout"; then
+        if ! "$repository/utilities/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py" --no-browser --dest-dir "$hardware_files_absolute/bom-interactive" --name-format "$project_name-bom-interactive" --include-tracks --include-nets "$layout"; then
             abort
         fi
 
-        if ! zip -ur "$release_archive" "$repository/$project_name-bom-interactive.html"; then
+        if ! ( cd "$repository" && zip -ur "$hardware_files_archive" "$hardware_files_relative/bom-interactive" ); then
             abort
         fi
     fi
@@ -192,11 +202,11 @@ function generate_production_files()
     local -r layout="$repository/$project_name.kicad_pcb"
 
     if git -C "$repository" ls-files --error-unmatch "$layout"; then
-        if ! "$repository/utilities/KiBot/src/kibot" -b "$layout" -c "$repository/kibot.yml" -d "$repository/$project_name-production-files"; then
+        if ! "$repository/utilities/KiBot/src/kibot" -b "$layout" -c "$repository/kibot.yml" -d "$hardware_files_absolute/production-files"; then
             abort
         fi
 
-        if ! zip -ur "$release_archive" "$repository/$project_name-production-files"; then
+        if ! ( cd "$repository" && zip -ur "$hardware_files_archive" "$hardware_files_relative/production-files" ); then
             abort
         fi
     fi
@@ -222,7 +232,10 @@ function generate_release()
     local -r project="${projects[0]}"
     local -r project_name=$( basename -s .kicad_pro "$project" )
 
-    local -r release_archive="$repository/$project_name-$version-hardware-files.zip"
+    local -r hardware_files="$project_name-$version-hardware-files"
+    local -r hardware_files_absolute="$repository/$hardware_files"
+    local -r hardware_files_relative="$hardware_files"
+    local -r hardware_files_archive="$repository/$hardware_files.zip"
 
     archive_kicad_files
 
