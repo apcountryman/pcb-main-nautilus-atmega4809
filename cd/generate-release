@@ -222,7 +222,7 @@ function generate_release()
     local -r project="${projects[0]}"
     local -r project_name=$( basename -s .kicad_pro "$project" )
 
-    local -r release_archive="$repository/$project_name-$version.zip"
+    local -r release_archive="$repository/$project_name-$version-hardware-files.zip"
 
     archive_kicad_files
 
