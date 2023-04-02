@@ -15,7 +15,8 @@
 # KIND, either express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-# Description: pcb-main-nautilus-atmega4809 repository CD release generation script.
+# Description: pcb-main-nautilus-atmega4809 repository CD hardware files generation
+#       script.
 
 function error()
 {
@@ -38,7 +39,7 @@ function abort()
 function display_help_text()
 {
     echo "NAME"
-    echo "    $mnemonic - Generate release."
+    echo "    $mnemonic - Generate hardware files."
     echo "SYNOPSIS"
     echo "    $mnemonic --help"
     echo "    $mnemonic --version"
@@ -212,7 +213,7 @@ function generate_production_files()
     fi
 }
 
-function generate_release()
+function generate_hardware_files()
 {
     check_klc_compliance_symbol
     check_klc_compliance_footprint
@@ -276,7 +277,7 @@ function main()
     done
 
     populate_version
-    generate_release
+    generate_hardware_files
 }
 
 main "$@"

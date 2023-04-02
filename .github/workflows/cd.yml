@@ -25,8 +25,8 @@ on:
             - test
 
 jobs:
-    generate-release:
-        name: Generate release
+    generate-hardware-files:
+        name: Generate hardware files
         runs-on: ubuntu-20.04
         steps:
             - uses: actions/checkout@v3
@@ -35,10 +35,10 @@ jobs:
             - name: Install dependencies
               shell: bash
               run: sudo add-apt-repository --yes ppa:kicad/kicad-6.0-releases && sudo apt update && sudo apt install kicad python3-psutil python3-wxgtk4.0 python3-xlsxwriter python3-xvfbwrapper xdotool
-            - name: Generate release
+            - name: Generate hardware files
               shell: bash
-              run: xvfb-run --auto-servernum ./cd/generate-release
-            - name: Upload release
+              run: xvfb-run --auto-servernum ./cd/generate-hardware-files
+            - name: Upload hardware files
               uses: svenstaro/upload-release-action@v2
               with:
                   file: pcb-main-nautilus-atmega4809-${{ github.ref_name }}-hardware-files.zip
