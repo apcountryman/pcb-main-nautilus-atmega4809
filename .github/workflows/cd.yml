@@ -20,9 +20,7 @@ name: CD
 on:
     push:
         tags:
-            - production-**
-            - prototype-**
-            - test
+            - v**
 
 jobs:
     generate-hardware-files:
