@@ -31,8 +31,9 @@ Additional checks, such as static analysis, are performed by this project's GitH
 CI workflow.
 
 ## Versioning
-`pcb-main-nautilus-atmega4809` follows the [Abseil Live at Head
-philosophy](https://abseil.io/about/philosophy).
+`pcb-main-nautilus-atmega4809` uses [Semantic Versioning
+2.0.0](https://semver.org/spec/v2.0.0.html).
+Version tags are prefixed with a `v`.
 
 ## Workflow
 `pcb-main-nautilus-atmega4809` uses the [GitHub
