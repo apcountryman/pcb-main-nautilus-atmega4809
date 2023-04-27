@@ -2345,7 +2345,7 @@
     (property "Value" "FTSH-105-01-L-DV-007-K" (id 1) (at 85.09 143.5099 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Connector_PinSocket_1.27mm:PinSocket_2x05_P1.27mm_Vertical_SMD" (id 2) (at 96.52 142.24 0)
+    (property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" (id 2) (at 96.52 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://suddendocs.samtec.com/catalog_english/ftsh_smt.pdf" (id 3) (at 87.63 173.99 90)
@@ -2952,7 +2952,7 @@
       (reference "J2") (unit 1) (value "105017-0001") (footprint "Connector_USB:USB_Micro-B_Molex-105017-0001")
     )
     (path "/9d9b595b-69b1-4b45-a127-543cf4026ae9"
-      (reference "J3") (unit 1) (value "FTSH-105-01-L-DV-007-K") (footprint "Connector_PinSocket_1.27mm:PinSocket_2x05_P1.27mm_Vertical_SMD")
+      (reference "J3") (unit 1) (value "FTSH-105-01-L-DV-007-K") (footprint "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD")
     )
     (path "/a762f87e-f18f-4806-abfa-7af92d8a4cc5"
       (reference "J4") (unit 1) (value "75844-101-06LF") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical")
