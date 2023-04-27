@@ -119,7 +119,7 @@ function check_design_rules_compliance()
 
 function archive_kicad_files()
 {
-    local kicad_files; mapfile -t kicad_files < <( git -C "$repository" ls-files '*.kicad_pro' '*.kicad_sch' '*.kicad_pcb' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly kicad_files
+    local kicad_files; mapfile -t kicad_files < <( git -C "$repository" ls-files '*.kicad_pro' '*.kicad_sch' '*.kicad_pcb' '*.kicad_wks' | xargs -r -d '\n' -I '{}' find "$repository/{}" ); readonly kicad_files
 
     if ! mkdir -p "$hardware_files_absolute/kicad"; then
         abort
